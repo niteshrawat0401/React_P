@@ -2,6 +2,7 @@ import axios from 'axios';
 import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react'
+import { Link } from 'react-router-dom';
 import "./Puppy.css"
 
 export const Puppy = () => {
@@ -11,23 +12,24 @@ export const Puppy = () => {
         axios.get(`https://dog.ceo/api/breeds/list/all`)
         .then((res)=>{
             let puppise= res.data.message;
-            console.log(puppise);
+            // console.log(puppise);
             setItems(puppise)
         })
         .catch((e)=>console.log(e))
     },[])
     const puppyData= Object.keys(items)
     const dataArr= puppyData
-    console.log(dataArr);
+    // console.log(dataArr);
   return (
     <div className='main_contaner'>
       {
         dataArr.map((ele,index)=>(
-          <Link>
             <div className='inner_continer' key={index}>
+               <Link to={`/puppy/${ele}`}>
             {ele}
-            </div>
             </Link>
+            </div>
+           
         ))
       }
     </div>

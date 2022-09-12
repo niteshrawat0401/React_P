@@ -7,7 +7,6 @@ import Serach from "./Searchfilter/Serach";
 import BookData from "./Searchfilter/db.json";
 // import Post from './Infinte scroll/post/Post';
 import { Todo } from "./Todo/pages/Todo";
-// import { Home } from './puppy love/Home';
 import { Home } from "./Scooty/Home";
 import { Route, Routes } from "react-router-dom";
 import { Display } from "./Scooty/Display";
@@ -23,7 +22,11 @@ function App() {
       {/* <Post/> */}
       {/* <Todo/> */}
       {/* <Home/> */}
-      <Puppy/>
+     
+      <Routes>
+        <Route path="/" element={<Puppy/>} />
+        <Route path="/puppy/:name" element={<Display />} />
+      </Routes>
       {/* <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/dis/:id" element={<Display />} />
