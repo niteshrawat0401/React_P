@@ -9,8 +9,9 @@ import BookData from "./Searchfilter/db.json";
 import { Todo } from "./Todo/pages/Todo";
 import { Home } from "./Scooty/Home";
 import { Route, Routes } from "react-router-dom";
-import { Display } from "./Scooty/Display";
+// import { Display } from "./Scooty/Display";
 import { Puppy } from "./puppy love/Puppy";
+import { Puppyname } from "./puppy love/Puppyname";
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
      
       <Routes>
         <Route path="/" element={<Puppy/>} />
-        <Route path="/puppy/:name" element={<Display />} />
+        <Route path="/puppy/:name" element={<Puppyname/>} />
       </Routes>
       {/* <Routes>
         <Route path="/" element={<Home />} />
