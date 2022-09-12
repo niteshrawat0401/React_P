@@ -1,0 +1,29 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+
+.main_contaner{
+    border: 1px solid grey;
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    margin-top: 1%;
+    
+}
+
+.inner_continer{
+    /* border: 1px solid red; */
+    font-size: 18px;
+    color: rgb(50, 50, 164);
+    line-height:3rem;
+}
+
+/* .main_contaner> div:nth-child(1){
+    border: 1px solid red;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+} */

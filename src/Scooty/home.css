@@ -1,0 +1,35 @@
+.main_container {
+    border: 1px solid red;
+    height: 4rem;
+  }
+  
+  .signout {
+    margin-left: 90%;
+    color: blue;
+    font-size: 20px;
+  }
+  
+  .container {
+    /* border: 1px solid grey; */
+    /* height: 50rem;
+      width: 60%;
+     
+      margin: auto; */
+    margin-top: 5rem;
+    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .inner_box {
+    border: 1px solid grey;
+    height: 250;
+    width: 60%;
+    margin: auto;
+    font-size: 20px;
+    color: rgb(48, 48, 221);
+    box-shadow: 1px 2px 2px 2px rgb(136, 131, 131);
+    text-align: center;
+    border-radius: 10px;
+  }
+  
