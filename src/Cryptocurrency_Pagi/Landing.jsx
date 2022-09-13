@@ -94,7 +94,7 @@ export const Landing = () => {
                 <td>{Number(elem.vwap24Hr).toFixed(2)}</td>
                 <td>{(Number(elem.supply) / 1000000).toFixed(2)}m</td>
                 <td>{(Number(elem.volumeUsd24Hr) / 1000000000).toFixed(2)}b</td>
-                <td style={{ color: "red" }} >
+                <td style={{ color: "red" }}>
                   {((Number(elem.changePercent24Hr) * 100) / 100).toFixed(2)}%
                 </td>
               </tr>
