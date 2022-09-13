@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import { useEffect } from 'react'
-import styles from './landing.module.css'
+import "./Crypto.css"
+// import styles from './landing.module.css'
 
 export const Landing = () => {
 const [result , setData]=useState([])
-const [pageNo , setPageNo] = useState(2)
+const [pageNo , setPageNo] = useState(50)
     
     useEffect(() => {
         let res = axios
@@ -16,6 +17,10 @@ const [pageNo , setPageNo] = useState(2)
           })
           .catch((e) => console.log(e));
       }, []);
+
+      const showMoreItems=()=>{
+        setPageNo((preVal) =>preVal+50)
+      }
       
       
         var sum =0;
@@ -39,28 +44,27 @@ const [pageNo , setPageNo] = useState(2)
 
   return (
 <>
-  <div>
-        <div>
-            <h1>MARKET CAP</h1>
-            <h1>{Market_cap.toFixed(2)}</h1>
+  <div className='stock_value_div'>
+        <div className='stock_value'>
+            <h2>MARKET CAP</h2>
+            <h3>{Market_cap.toFixed(2)}</h3>
         </div>
 
         <div>
-            <h1>EXCHANGE VOL</h1>
-            <h1>{Volumeadd.toFixed(2)}</h1>
+            <h2>EXCHANGE VOL</h2>
+            <h3>{Volumeadd.toFixed(2)}</h3>
         </div>
         <div>
-            <h1></h1>
-            <h1>{changePercent.toFixed(2)}</h1>
+            <h2>Markets</h2>
+            <h3>{changePercent.toFixed(2)}</h3>
         </div>
-
   </div>
   <div>
-  <button onClick={()=>{if(pageNo>1){{setPageNo(pageNo-1)}}}}>Previous</button>
-  <button onClick={()=>setPageNo(pageNo+1)}>Next</button>
+  {/* <button onClick={()=>{if(pageNo>1){{setPageNo(pageNo-1)}}}}>Previous</button> */}
+  {/* <button onClick={()=>setPageNo(pageNo+1)}>Next</button> */}
   </div>
-    <div className={styles.table_main_div}>
-        <table border="1">
+    <div className={""}>
+        <table className='table_data'>
             <thead>
                 <tr>
                     <th>Rank</th>
@@ -74,19 +78,20 @@ const [pageNo , setPageNo] = useState(2)
                 </tr>
             </thead>
             <tbody>
-               {result.map((elem)=>
+               {result.slice(0,pageNo).map((elem)=>
                    <tr key = {elem.id}>
                      <td>
                         {elem.rank}
                      </td>
                       <td>
-                        <div className={styles.map_logo}>
-                            <div>
+                        <div className="for_flex">
+                            <div >
                                 <img src={`https://assets.coincap.io/assets/icons/${elem.symbol.toLowerCase()}@2x.png`} alt="" />
                             </div>
-                            <div>
-                                <p>{elem.name}</p>
-                                <p>{elem.symbol}</p>
+                            <div className=''>
+                            <p>{elem.name}</p>
+                            <p>{elem.symbol}</p>
+                               
                             </div>
                         </div>
                       </td>
@@ -105,7 +110,7 @@ const [pageNo , setPageNo] = useState(2)
                       <td>
                         {(Number(elem.volumeUsd24Hr)/1000000000).toFixed(2)}b
                       </td>
-                      <td>
+                      <td style={{color:"red"}}>
                         {((Number(elem.changePercent24Hr)*100)/100).toFixed(2)}%
                       </td>
                    </tr>
@@ -115,6 +120,7 @@ const [pageNo , setPageNo] = useState(2)
 
             </tbody>
         </table>
+        <button className='viewMore_btn' onClick={showMoreItems}>View More</button>
     </div>
   </>
   )

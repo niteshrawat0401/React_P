@@ -1,0 +1,43 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+.stock_value_div{
+    /* border: 1px solid red; */
+    display: flex;
+    height: 12rem;
+    margin: auto;
+    margin-top: 1rem;
+    justify-content: space-around;
+    position: relative;
+    color: white;
+    background: linear-gradient(to right, rgb(63, 81, 181), rgb(100, 181, 246)) rgb(255, 255, 255) !important;
+}
+
+.table_data{
+    border-radius: 5px;
+    /* border: 1px solid red; */
+    width: 75%;
+    margin: auto;
+    z-index: 1;
+    margin-top: -6rem;
+    position: relative;
+    background-color: white;
+    border-collapse: collapse;
+}
+.table_data td, .table_data th{
+  
+    padding: 8px;
+}
+.table_data tr:nth-child(even){
+    background-color: #add;
+}
+.table_data tr:hover{
+    background-color: #c6cece;
+}
+
+
+.for_flex{
+    display: flex;
+}
