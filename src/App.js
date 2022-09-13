@@ -13,6 +13,7 @@ import { Route, Routes } from "react-router-dom";
 import { Puppy } from "./puppy love/Puppy";
 import { Puppyname } from "./puppy love/Puppyname";
 import { Pagination } from "./Pagination/Pagination";
+import { Landing } from "./Cryptocurrency_Pagi/Landing";
 
 function App() {
   return (
@@ -24,7 +25,8 @@ function App() {
       {/* <Post/> */}
       {/* <Todo/> */}
       {/* <Home/> */}
-     <Pagination/>
+     {/* <Pagination/> */}
+     <Landing/>
       {/* <Routes>
         <Route path="/" element={<Puppy/>} />
         <Route path="/puppy/:name" element={<Puppyname/>} />
