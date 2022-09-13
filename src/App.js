@@ -12,6 +12,7 @@ import { Route, Routes } from "react-router-dom";
 // import { Display } from "./Scooty/Display";
 import { Puppy } from "./puppy love/Puppy";
 import { Puppyname } from "./puppy love/Puppyname";
+import { Pagination } from "./Pagination/Pagination";
 
 function App() {
   return (
@@ -23,11 +24,11 @@ function App() {
       {/* <Post/> */}
       {/* <Todo/> */}
       {/* <Home/> */}
-     
-      <Routes>
+     <Pagination/>
+      {/* <Routes>
         <Route path="/" element={<Puppy/>} />
         <Route path="/puppy/:name" element={<Puppyname/>} />
-      </Routes>
+      </Routes> */}
       {/* <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/dis/:id" element={<Display />} />

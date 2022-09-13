@@ -1,0 +1,23 @@
+.img_div{
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.bog_page{
+    display: flex;
+    /* border: 1px solid red; */
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.page{
+    border: 1px solid #f7f6f3;
+    background-color: #e0f3f3;
+    width: 2%;
+    height: 30px;
+    margin-top: 2rem;
+    cursor: pointer;
+    color: blue;
+    justify-content: space-between;
+}
