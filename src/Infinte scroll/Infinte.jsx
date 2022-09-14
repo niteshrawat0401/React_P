@@ -1,24 +1,22 @@
 import axios from "axios";
 import React from "react";
-import { useEffect } from "react";
-import { useState } from "react";
-
-const PAGE_NUMBER = 1;
+import { useEffect,useState } from "react";
 
 export const Infinte = () => {
   const [coinsData, setCoinsData] = useState([]);
-  const [page, setPage] = useState(PAGE_NUMBER);
+  const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    setTimeout(async () => {
-      const response = await axios.get(
-        `https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-products?page=${page}&limit=10&orderBy=desc`
-      );
-
-      setCoinsData((prev) => {
-        return [...prev, ...response.data.data];
-      });
+    setTimeout(() => {
+    //   const response = await
+       axios.get(
+        `https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-products?page=${page}&limit=10&orderBy=desc`)
+        .then((res)=>{
+            setCoinsData((prevData) => {
+                return [...prevData, ...res.data.data];
+              });
+        })
       setLoading(false);
     }, 1500);
   }, [page]);
@@ -29,7 +27,7 @@ export const Infinte = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleScroll = async () => {
+  const handleScroll=() => {
     if (
       window.innerHeight + document.documentElement.scrollTop + 1 >=
       document.documentElement.scrollHeight
@@ -59,7 +57,7 @@ export const Infinte = () => {
           );
         })}
       </div>
-      {loading && <p>....loading</p>}
+      {loading && <p>....Loading</p>}
     </div>
   );
 };
