@@ -1,14 +1,13 @@
-.cloth_container{
-    width: 85%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
+.cloth_container {
+  width: 85%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
-.input_div{
-    line-height: 2rem;
-    height:10rem;
-    overflow: scroll;
-    overflow-y: scroll;
-    overflow-x: hidden;
-
+.input_div {
+  line-height: 2rem;
+  height: 10rem;
+  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
