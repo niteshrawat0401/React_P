@@ -1,0 +1,6 @@
+.cloth_container{
+    width: 85%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}

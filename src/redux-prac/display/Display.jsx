@@ -4,6 +4,7 @@ import { useEffect } from 'react'
 import {useSelector, useDispatch} from "react-redux"
 import {getaData, dataSort} from "../product-action/product_action"
 import { Show } from './Show'
+import "./dataDisplay.css"
 
 export const Display = () => {
   const [value, setValue]= useState("")
@@ -31,10 +32,11 @@ export const Display = () => {
     <div>
        
         <select onChange={handleSort}>
-            <option value="asc">ltoh</option>
-            <option value="desc">htol</option>
+            <option value="">Sort by Price</option>
+            <option value="asc">Low to High`</option>
+            <option value="desc">High to Low</option>
         </select>
-        <div>
+        <div className='cloth_container'>
           {
             products.map((prod)=>(
                 <Show key={prod.id} {...prod}/>

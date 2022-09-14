@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-// import { Display } from './redux-prac/display/Display';
+import { Display } from './redux-prac/display/Display';
 import Button from "./Button/Button";
 import { Toggle } from "./Button/Toggle";
 import Serach from "./Searchfilter/Serach";
@@ -18,7 +18,7 @@ import { Landing } from "./Cryptocurrency_Pagi/Landing";
 function App() {
   return (
     <div className="App">
-      {/* <Display/> */}
+      <Display/>
       {/* <Button/> */}
       {/* <Toggle/> */}
       {/* <Serach placeholder="Enter a Book Name..." data={BookData}/> */}
@@ -26,7 +26,7 @@ function App() {
       {/* <Todo/> */}
       {/* <Home/> */}
      {/* <Pagination/> */}
-     <Landing/>
+     {/* <Landing/> */}
       {/* <Routes>
         <Route path="/" element={<Puppy/>} />
         <Route path="/puppy/:name" element={<Puppyname/>} />
