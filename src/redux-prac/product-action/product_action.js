@@ -26,7 +26,7 @@ export const dataSort =(payload)=>({
     payload
 })
 
-export const filterData =(payload)=>({
-    type:FILTER_DATA,
-    payload
+export const filterData=(payload)=>({
+    type: FILTER_DATA,
+    payload,
 })

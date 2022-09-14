@@ -40,13 +40,20 @@ export const getreducer = (state = initState, { type, payload }) => {
           }
         }),
       };
-    case FILTER_DATA:
+      case FILTER_DATA:
       return {
         ...state,
-        filter: state.products.filter((item) => {
-          return item.category === payload;
+        filterData: state.products.filter((item) => {
+          return +item.price < +payload;
         }),
       };
+    // case FILTER_DATA:
+    //   return {
+    //     ...state,
+    //     filter: state.products.filter((item) => {
+    //       return item.category === payload;
+    //     }),
+    //   };
 
     default:
       return state;
