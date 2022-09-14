@@ -5,7 +5,6 @@ import Button from "./Button/Button";
 import { Toggle } from "./Button/Toggle";
 import Serach from "./Searchfilter/Serach";
 import BookData from "./Searchfilter/db.json";
-// import Post from './Infinte scroll/post/Post';
 import { Todo } from "./Todo/pages/Todo";
 import { Home } from "./Scooty/Home";
 import { Route, Routes } from "react-router-dom";
@@ -14,15 +13,16 @@ import { Puppy } from "./puppy love/Puppy";
 import { Puppyname } from "./puppy love/Puppyname";
 import { Pagination } from "./Pagination/Pagination";
 import { Landing } from "./Cryptocurrency_Pagi/Landing";
+import { Infinte } from "./Infinte scroll/Infinte";
 
 function App() {
   return (
     <div className="App">
-      <Display/>
+      {/* <Display/> */}
       {/* <Button/> */}
       {/* <Toggle/> */}
       {/* <Serach placeholder="Enter a Book Name..." data={BookData}/> */}
-      {/* <Post/> */}
+      <Infinte/>
       {/* <Todo/> */}
       {/* <Home/> */}
      {/* <Pagination/> */}
