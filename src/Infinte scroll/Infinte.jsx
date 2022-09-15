@@ -39,7 +39,7 @@ export const Infinte = () => {
 
   return (
     <div className="app">
-      <h1>Crypto Gallery</h1>
+      <h1>Product Gallery</h1>
       {/* <CryptoList coinsData={coinsData} /> */}
       <div className="crypto_list">
         {coinsData.map((ele) => {

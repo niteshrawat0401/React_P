@@ -1,14 +1,14 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { Display } from './redux-prac/display/Display';
+// import { Display } from './redux-prac/display/Display';
 import Button from "./Button/Button";
 import { Toggle } from "./Button/Toggle";
 import Serach from "./Searchfilter/Serach";
 import BookData from "./Searchfilter/db.json";
 import { Todo } from "./Todo/pages/Todo";
-import { Home } from "./Scooty/Home";
 import { Route, Routes } from "react-router-dom";
-// import { Display } from "./Scooty/Display";
+// import { Home } from "./Scooty/Home";
+// import {Display} from "./Scooty/Display"
 import { Puppy } from "./puppy love/Puppy";
 import { Puppyname } from "./puppy love/Puppyname";
 import { Pagination } from "./Pagination/Pagination";
