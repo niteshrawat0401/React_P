@@ -20,9 +20,9 @@ function App() {
     <div className="App">
       {/* <Display/> */}
       {/* <Button/> */}
-      {/* <Toggle/> */}
+      <Toggle/>
       {/* <Serach placeholder="Enter a Book Name..." data={BookData}/> */}
-      <Infinte/>
+      {/* <Infinte/> */}
       {/* <Todo/> */}
       {/* <Home/> */}
      {/* <Pagination/> */}
