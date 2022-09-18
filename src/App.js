@@ -19,8 +19,8 @@ function App() {
   return (
     <div className="App">
       {/* <Display/> */}
-      {/* <Button/> */}
-      <Toggle/>
+      <Button/>
+      {/* <Toggle/> */}
       {/* <Serach placeholder="Enter a Book Name..." data={BookData}/> */}
       {/* <Infinte/> */}
       {/* <Todo/> */}
