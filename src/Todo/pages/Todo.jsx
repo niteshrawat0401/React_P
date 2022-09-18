@@ -28,7 +28,7 @@ export const Todo = () => {
   };
 
   useEffect(() => {
-    let res = axios
+    axios
       .get("http://localhost:8000/data")
       .then((res) => {
         console.log("get data succesfully", res.data);
