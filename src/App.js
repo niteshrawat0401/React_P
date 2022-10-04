@@ -14,13 +14,17 @@ import { Puppyname } from "./puppy love/Puppyname";
 import { Pagination } from "./Pagination/Pagination";
 import { Landing } from "./Cryptocurrency_Pagi/Landing";
 import { Infinte } from "./Infinte scroll/Infinte";
+import { UseMemo } from "./Button/UseMemo";
+import { StudentDetails } from "./table/StudentDetails";
 
 function App() {
   return (
     <div className="App">
+      {/* <StudentDetails/> */}
       {/* <Display/> */}
-      <Button/>
+      {/* <Button/> */}
       {/* <Toggle/> */}
+      {/* <UseMemo/> */}
       {/* <Serach placeholder="Enter a Book Name..." data={BookData}/> */}
       {/* <Infinte/> */}
       {/* <Todo/> */}
