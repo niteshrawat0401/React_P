@@ -72,6 +72,7 @@ export const Landing = () => {
             </tr>
           </thead>
           <tbody>
+            {/* slice use for load more */}
             {result.slice(0, pageNo).map((elem) => (
               <tr key={elem.id}>
                 <td>{elem.rank}</td>

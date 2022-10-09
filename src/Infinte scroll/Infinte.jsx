@@ -14,6 +14,7 @@ export const Infinte = () => {
         `https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-products?page=${page}&limit=10&orderBy=desc`)
         .then((res)=>{
             setCoinsData((prevData) => {
+              // not remove previous data also new data add
                 return [...prevData, ...res.data.data];
               });
         })
