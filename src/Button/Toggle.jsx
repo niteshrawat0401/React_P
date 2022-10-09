@@ -12,9 +12,9 @@ export const Toggle = () => {
     <div>
       <div>
         {show ? (
-          <h2 style={{ color: "yellow" }}>I am Nitesh Singh Rawat</h2>
+          <h2 style={{ color: "#434343" }}>I am Nitesh Singh Rawat</h2>
         ) : (
-          <h2 style={{ color: "red" }}>Open Name</h2>
+          <h2 style={{ color: "#18c683" }}>Open Name</h2>
         )}
       </div>
       <button onClick={handleClick}>Toggle</button>
