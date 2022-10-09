@@ -24,7 +24,7 @@ function App() {
       {/* <Display/> */}
       {/* <Button/> */}
       {/* <Toggle/> */}
-      {/* <UseMemo/> */}
+      <UseMemo/>
       {/* <Serach placeholder="Enter a Book Name..." data={BookData}/> */}
       {/* <Infinte/> */}
       {/* <Todo/> */}
