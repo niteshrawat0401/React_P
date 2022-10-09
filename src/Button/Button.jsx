@@ -13,7 +13,7 @@ const Button = () => {
       <div>
         <button
           onClick={handleColor}
-          style={{ backgroundColor: change ? "yellow" : "purple" }}
+          style={{ backgroundColor: change ? "#4255a4" : "#959595" }}
         >
           Click Here
         </button>
