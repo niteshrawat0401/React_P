@@ -1,60 +1,60 @@
-{ 
-    "data":[
+{
+  "data": [
     {
-     "id":1,     
-    "name":"TVS",
-    "image":"https://media.zigcdn.com/media/model/2020/Jun/jupiter_195x130.jpg",
-    "capacity": 2,
-    "rentPerHour": 600
+      "id": 1,
+      "name": "TVS",
+      "image": "https://media.zigcdn.com/media/model/2020/Jun/jupiter_195x130.jpg",
+      "capacity": 2,
+      "rentPerHour": 600
     },
     {
-        "id":2,  
-"name":"TVS",
-"image":"https://imgd.aeplcdn.com/310x174/n/cw/ec/44686/activa-6g-right-front-three-quarter.jpeg",
-"capacity":2,
-"rentPerHour":400
+      "id": 2,
+      "name": "TVS",
+      "image": "https://imgd.aeplcdn.com/310x174/n/cw/ec/44686/activa-6g-right-front-three-quarter.jpeg",
+      "capacity": 2,
+      "rentPerHour": 400
     },
     {
-        "id":3,  
-"name":"TVS Notorqo",
-"image":"https://imgd.aeplcdn.com/310x174/n/cw/ec/102709/ntorq-125-right-front-three-quarter.jpeg?isig=0",
-"capacity":2,
-"rentPerHour":200
+      "id": 3,
+      "name": "TVS Notorqo",
+      "image": "https://imgd.aeplcdn.com/310x174/n/cw/ec/102709/ntorq-125-right-front-three-quarter.jpeg?isig=0",
+      "capacity": 2,
+      "rentPerHour": 200
     },
     {
-        "id":4,  
-"name":"Honda Dio Baleno",
-"image":"https://imgd.aeplcdn.com/310x174/n/cw/ec/49460/dio-right-front-three-quarter.jpeg?isig=0",
-"capacity":2,
-"rentPerHour":200
+      "id": 4,
+      "name": "Honda Dio Baleno",
+      "image": "https://imgd.aeplcdn.com/310x174/n/cw/ec/49460/dio-right-front-three-quarter.jpeg?isig=0",
+      "capacity": 2,
+      "rentPerHour": 200
     },
     {
-      "id":5,
-"name":"Honda Activa",
-"image":"https://imgd.aeplcdn.com/310x174/n/cw/ec/56823/activa-125-right-front-three-quarter.jpeg?isig=0",
-"capacity":2,
-"rentPerHour":100
+      "id": 5,
+      "name": "Honda Activa",
+      "image": "https://imgd.aeplcdn.com/310x174/n/cw/ec/56823/activa-125-right-front-three-quarter.jpeg?isig=0",
+      "capacity": 2,
+      "rentPerHour": 100
     },
     {
-     "id":6, 
-"name":"Maruti Baleno",
-"image":"https://imgd.aeplcdn.com/310x174/n/cw/ec/56823/activa-125-right-front-three-quarter.jpeg?isig=0",
-"capacity":2,
-"rentPerHour":300
+      "id": 6,
+      "name": "Maruti Baleno",
+      "image": "https://imgd.aeplcdn.com/310x174/n/cw/ec/56823/activa-125-right-front-three-quarter.jpeg?isig=0",
+      "capacity": 2,
+      "rentPerHour": 300
     },
     {
-   "id":7,   
-"name":"TVS jupiter",
-"image":"https://imgd.aeplcdn.com/310x174/bw/models/tvs-jupiter-sheet-metal-wheel20210111113827.jpg",
-"capacity":2,
-"rentPerHour":100
+      "id": 7,
+      "name": "TVS jupiter",
+      "image": "https://imgd.aeplcdn.com/310x174/bw/models/tvs-jupiter-sheet-metal-wheel20210111113827.jpg",
+      "capacity": 2,
+      "rentPerHour": 100
     },
     {
-    "id":8,  
-"name":"Yahamaha",
-"image":"https://imgd.aeplcdn.com/310x174/n/cw/ec/103097/ray-right-front-three-quarter-2.jpeg?isig=0",
-"capacity":2,
-"rentPerHour":200
+      "id": 8,
+      "name": "Yahamaha",
+      "image": "https://imgd.aeplcdn.com/310x174/n/cw/ec/103097/ray-right-front-three-quarter-2.jpeg?isig=0",
+      "capacity": 2,
+      "rentPerHour": 200
     }
-]
+  ]
 }

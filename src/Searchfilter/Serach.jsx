@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./search.css";
-import SearchIcon from '@mui/icons-material/Search';
-import CloseIcon from '@mui/icons-material/Close';
+import SearchIcon from "@mui/icons-material/Search";
+import CloseIcon from "@mui/icons-material/Close";
 
 function Serach({ placeholder, data }) {
   const [filteredData, setFilteredData] = useState([]);
