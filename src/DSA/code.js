@@ -30,6 +30,18 @@ return -1 -1;
 
 let s=0;
 let e=n-1;
+let count=0;
 while(s<e && n>=0){
-    if(arr1)
+    if(arr1[s]===arr2[e]){
+        count++;
+        s++;
+        e--;
+    }
+    else if(arr1[s]>arr2[e]){
+        e--;
+    }
+    else{
+        s++;
+    }
 }
+console.log(count);
