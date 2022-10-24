@@ -21,3 +21,15 @@ while(l<r){
     }
 }
 return -1 -1;
+
+// Two Sorted Arrays
+// 1
+// 6
+// 1 2 2 3 4 5
+// 4 4 3 2 1 1
+
+let s=0;
+let e=n-1;
+while(s<e && n>=0){
+    if(arr1)
+}
