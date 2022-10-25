@@ -69,3 +69,24 @@ for(let i=0;i<n;i++){
 console.log(count2);
 
 
+// Selection Sort Problem
+// 5
+// 3 5 0 9 8
+
+function swap(arr,i,j){
+    let temp=arr[i];
+    arr[i]=arr[j];
+    arr[j]=temp
+}
+
+for(let i=0;i<n-1;i++){
+    index=i;
+    for(let j=i+1;j<n;j++){
+        if(arr[index]>arr[j]){
+            swap(arr,index,j);
+        }
+    }
+}
+console.log(arr.join(" "));
+
+
