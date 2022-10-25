@@ -116,3 +116,19 @@ console.log(arr.join(" "));
 // 3
 // 2
 // 3
+
+let stack=[]
+if(k===1){
+    stack.push(l)
+}
+else if(k===2){
+        stack.pop()
+}
+else if(k===3){
+    if(stack.length-1!=0){
+        console.log(stack[stack.length-1]);
+    }
+    else{
+        console.log("Empty!");
+    }
+}
