@@ -155,3 +155,23 @@ else{
     console.log(stack1.join(""));
 }
 
+// SNE Modified
+// Print a single integer denoting the number of elements which do not have a smaller neighbor element to the left side
+// 8
+// 39 27 11 4 24 32 32 1
+
+let count=0;
+let stack2=[];
+for(let i=0;i<n;i++){
+    while(stack2.length!==0 && arr[i]<=stack2[stack2.length-1]){
+        stack2.pop();
+    }
+    if(stack2.length===0){
+        count++;
+    }
+    else{
+        continue;
+    }
+    stack2.push(arr[i])
+}
+console.log(count);
