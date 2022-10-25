@@ -132,3 +132,26 @@ else if(k===3){
         console.log("Empty!");
     }
 }
+
+// Reduce String
+// str= aaabccddd
+
+let stack1=[];
+for(let i=0;i<n;i++){
+    if(stack1[stack1.length]===0){
+        stack1.push(str[i])
+    }
+    else if(stack1[stack1.length]===str[i]){
+        stack1.pop()
+    }
+    else{
+        stack1.push(str[i])
+    }
+}
+if(stack1.length===0){
+    console.log("Empty String");
+}
+else{
+    console.log(stack1.join(""));
+}
+
