@@ -102,3 +102,17 @@ for(let i=0;i<n-1;i++){
     }
 }
 console.log(arr.join(" "));
+
+
+// Push, Pop and Top
+// 1 x : Push x to the top of the stack.
+// 2 : Pop an element from the top of the stack. If the stack is empty, do nothing.
+// 3 : Print the top element of the stack (if stack is empty, print "Empty!" (without quotes)).
+
+// 6
+// 1 15
+// 1 20
+// 2
+// 3
+// 2
+// 3
