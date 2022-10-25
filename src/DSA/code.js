@@ -179,3 +179,13 @@ for(let i=0;i<n;i++){
     stack2.push(arr[i])
 }
 console.log(count);
+
+// Masai Sentence Reversal
+// A Transformation in education
+
+var arr= input.trim().split(" ");
+    var bag="";
+    for(let i=arr.length-1;i>=0;i--){
+        bag+=arr[i]+" ";
+    }
+    console.log(bag);
