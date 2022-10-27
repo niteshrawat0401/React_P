@@ -5,6 +5,7 @@ const path= require("path");
 const dirPath= path.join(__dirname, "crud");
 const filePath = `${dirPath}/apple.txt`;
 
+// Crud with file system
 // File Read
 // fs.readFile(filePath, "utf8", (err, item)=>{
 //     console.log(item);
@@ -26,7 +27,7 @@ const filePath = `${dirPath}/apple.txt`;
 // fs.unlinkSync(`${dirPath}/orange.txt`)
 
 
-// Procss Use fs
+// Procss Use fs  input from command line
 // const fs = require("fs");
 // const input= process.argv
 // if(input[2]==="add"){
@@ -39,7 +40,7 @@ const filePath = `${dirPath}/apple.txt`;
 //     console.log("wrong");
 // }
 
-
+// How to handle asynchronous
 let a=10;
 let b=0;
 
