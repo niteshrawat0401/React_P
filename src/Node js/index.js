@@ -10,15 +10,20 @@ const filePath = `${dirPath}/apple.txt`;
 //     console.log(item);
 // })
 
+// Add new
 // fs.appendFile(filePath, " and this is new file", (err)=>{
 //     if(!err)
 //     console.log("file is updated");
 // })
 
+// File Reanme
 // fs.rename(filePath, `${dirPath}/orange.txt`, (err)=>{
 //     if(!err)
 //     console.log("File name is updated");
 // })
+
+// Delete File
+fs.unlinkSync(`${dirPath}/orange.txt`)
 
 
 // Procss Use fs
