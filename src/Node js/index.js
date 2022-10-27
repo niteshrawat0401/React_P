@@ -10,7 +10,10 @@ const filePath = `${dirPath}/apple.txt`;
 //     console.log(item);
 // })
 
-
+fs.appendFile(filePath, " and this is new file", (err)=>{
+    if(!err)
+    console.log("file is updated");
+})
 
 
 // Procss Use fs
