@@ -23,7 +23,7 @@ const filePath = `${dirPath}/apple.txt`;
 // })
 
 // Delete File
-fs.unlinkSync(`${dirPath}/orange.txt`)
+// fs.unlinkSync(`${dirPath}/orange.txt`)
 
 
 // Procss Use fs
@@ -38,6 +38,21 @@ fs.unlinkSync(`${dirPath}/orange.txt`)
 // else{
 //     console.log("wrong");
 // }
+
+
+let a=10;
+let b=0;
+
+let waittingData= new Promise((resolve, reject)=>{
+    setTimeout(()=>{
+        resolve(30);
+    },2000)
+})
+
+waittingData.then((data)=>{
+    b=data
+    console.log(a+b);
+})
 
 
 
