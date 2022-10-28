@@ -11,10 +11,18 @@ const app = express()
 
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
-app.use(express.static(publicPath))
+// app.use(express.static(publicPath))
+app.get("/home", (req,res)=>{
+    res.sendFile(`${publicPath}/home.html`)
+})
+app.get("*", (req,res)=>{
+    res.sendFile(`${publicPath}/nopage.html`)
+})
 app.get('/', (req,res) => res.send('hello'))
 
 app.listen(8080, () => {console.log('Server started on http://localhost:8080')})
+
+
 
 // Crud with file system
 // File Read
@@ -38,6 +46,7 @@ app.listen(8080, () => {console.log('Server started on http://localhost:8080')})
 // fs.unlinkSync(`${dirPath}/orange.txt`)
 
 
+
 // Procss Use fs  input from command line
 // const fs = require("fs");
 // const input= process.argv
@@ -50,6 +59,8 @@ app.listen(8080, () => {console.log('Server started on http://localhost:8080')})
 // else{
 //     console.log("wrong");
 // }
+
+
 
 // How to handle asynchronous
 // let a=10;
