@@ -3,7 +3,7 @@
 const express = require('express')
 // const fs= require("fs");
 const path= require("path");
-
+const publicPath= path.join(__dirname, "public")
 // const dirPath= path.join(__dirname, "crud");
 // const filePath = `${dirPath}/apple.txt`;
 
@@ -11,6 +11,7 @@ const app = express()
 
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
+app.use(express.static(publicPath))
 app.get('/', (req,res) => res.send('hello'))
 
 app.listen(8080, () => {console.log('Server started on http://localhost:8080')})
