@@ -1,9 +1,19 @@
 // const http= require("http");
 // const data= require("./data")
-const fs= require("fs");
+const express = require('express')
+// const fs= require("fs");
 const path= require("path");
-const dirPath= path.join(__dirname, "crud");
-const filePath = `${dirPath}/apple.txt`;
+
+// const dirPath= path.join(__dirname, "crud");
+// const filePath = `${dirPath}/apple.txt`;
+
+const app = express()
+
+app.use(express.urlencoded({extended: true}))
+app.use(express.json())
+app.get('/', (req,res) => res.send('hello'))
+
+app.listen(8080, () => {console.log('Server started on http://localhost:8080')})
 
 // Crud with file system
 // File Read
@@ -41,19 +51,19 @@ const filePath = `${dirPath}/apple.txt`;
 // }
 
 // How to handle asynchronous
-let a=10;
-let b=0;
+// let a=10;
+// let b=0;
 
-let waittingData= new Promise((resolve, reject)=>{
-    setTimeout(()=>{
-        resolve(30);
-    },2000)
-})
+// let waittingData= new Promise((resolve, reject)=>{
+//     setTimeout(()=>{
+//         resolve(30);
+//     },2000)
+// })
 
-waittingData.then((data)=>{
-    b=data
-    console.log(a+b);
-})
+// waittingData.then((data)=>{
+//     b=data
+//     console.log(a+b);
+// })
 
 
 
