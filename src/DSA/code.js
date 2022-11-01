@@ -320,3 +320,26 @@ function performerging(arr3,count){
       arr3[i] = arr3[j];
       arr3[j] = temp;
   }
+
+//   Binary Search - Iterative
+// Given n distinct numbers, implement iterative binary search to check the presence of target number k.
+// In case k is present among those n numbers, print 1
+// Else print -1
+// 5 0
+// 2 -2 0 3 4
+
+let l1=0;
+let r1=n-1;
+while(l1<=r1){
+    let mid= Math.floor((l1+r1)/2);
+    if(arr[mid]===k){
+        return 1;
+    }
+    else if(arr[mid]>k){
+        r1= mid-1;
+    }
+    else{
+        l1=mid+1
+    }
+}
+return -1;
