@@ -189,3 +189,16 @@ var arr= input.trim().split(" ");
         bag+=arr[i]+" ";
     }
     console.log(bag);
+
+
+// Array to String
+// If elements of the array are 3 5 0 9 8 => the output string should be "35098" (without quotes). But in case of elements are negative (lesser than 0), your string should contain 0 instead of that number.
+// 5
+// 2 -4 6 8 -9
+
+for(let i=0;i<n;i++){
+    if(arr[i]<0){
+        arr[i]=0
+    }
+}
+console.log(arr[i].join(""));
