@@ -202,3 +202,14 @@ for(let i=0;i<n;i++){
     }
 }
 console.log(arr[i].join(""));
+
+// Factorial-Recursion
+// 5
+function factorial(){
+if(N===0 || N===1){
+    return 1
+}
+else{
+    return N*factorial(N-1)
+}
+}
