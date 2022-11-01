@@ -213,3 +213,21 @@ else{
     return N*factorial(N-1)
 }
 }
+
+// Sum of array
+// 3
+// 5
+// 6 3 8 2 -4
+// 5
+// -10 -7 10 2 -2
+// 5
+// -4 -5 6 -3 9
+
+function sum(){
+    if(n===0){
+        return 0
+    }
+    else{
+        return sum(arr,n-1)+(arr[n-1]);
+    }
+}
