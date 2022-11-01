@@ -343,3 +343,28 @@ while(l1<=r1){
     }
 }
 return -1;
+
+
+// Binary Search - Recursive
+// Given n distinct numbers, implement a recursive binary search to check the presence of target number k.
+// In case k is present among those n numbers, print 1
+// Else print -1
+// 5 0
+// 2 -2 0 3 4
+
+let l2=0;
+let r2=n-1
+function binarysearchrecursive(arr,l,r,n,k){
+    let mid= Math.floor((l2+(r2-l2)/2))
+
+    if(arr[mid]===k){
+        return 1;
+    }
+    else if(arr[mid]>k){
+        binarysearchrecursive(arr,l2,mid-1,n,k)
+    }
+    else{
+        binarysearchrecursive(arr,l2,mid+1,n,k)
+    }
+}
+return -1;
