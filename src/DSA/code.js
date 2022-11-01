@@ -275,3 +275,18 @@ if(nick(k,cur)===true){
 else if(nick(k,cur)===false){
     console.log("No");
 }
+
+
+// Power Function - Recursive
+// Given two integers a and b, we need to find the value of a^b recursively.
+// 2 4
+
+function power(k,l){
+    if(l===0){
+        return 1;
+    }
+    else{
+        return k*power(k,l-1)
+    }
+}
+console.log(power(k,l));
