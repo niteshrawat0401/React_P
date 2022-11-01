@@ -205,7 +205,7 @@ console.log(arr[i].join(""));
 
 // Factorial-Recursion
 // 5
-function factorial(){
+function factorial(N){
 if(N===0 || N===1){
     return 1
 }
@@ -214,7 +214,7 @@ else{
 }
 }
 
-// Sum of array
+// Sum of array by recursion
 // 3
 // 5
 // 6 3 8 2 -4
@@ -223,7 +223,7 @@ else{
 // 5
 // -4 -5 6 -3 9
 
-function sum(){
+function sum(n){
     if(n===0){
         return 0
     }
@@ -231,3 +231,18 @@ function sum(){
         return sum(arr,n-1)+(arr[n-1]);
     }
 }
+
+// Beyond Factorial!
+// Given an integer N, you have to find the natural logarithmic value of the given integer's factorial i.e., ln(n!).
+// You have to print the result up to 4 digits after the decimal point.
+// 3
+
+function check(n){
+    if(n===1){
+        return 0;
+    }
+    else{
+        return Math.log(n)+ check(n-1)
+    }
+}
+console.log(check(n).toFixed(4));
