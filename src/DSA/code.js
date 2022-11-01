@@ -290,3 +290,33 @@ function power(k,l){
     }
 }
 console.log(power(k,l));
+
+// Perform Merging
+// You are given two sorted arrays each of length N. Your task is to write a program that merges both the arrays such that the final array formed after merging is sorted.
+// 4
+// 1 5 7 9
+// 2 4 6 8
+
+var newarr = arr.concat(arr1);
+var count3=0;
+performerging(newarr,count);
+console.log(newarr.join(" "));
+
+function performerging(arr3,count){
+    if(count > arr3.length-1){
+        return; 
+    }
+     for(var i=0;i<arr3.length-1;i++){
+         for(var j=0;j<arr3.length-i-1;j++){
+             if(arr3[j]>arr3[j+1]){
+                 swap(arr3,j,j+1);
+             }
+         }
+     }
+     return performerging(arr3,count+1);
+  }
+  function swap(arr3,i,j){
+      var temp = arr3[i];
+      arr3[i] = arr3[j];
+      arr3[j] = temp;
+  }
