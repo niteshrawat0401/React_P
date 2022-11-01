@@ -246,3 +246,32 @@ function check(n){
     }
 }
 console.log(check(n).toFixed(4));
+
+// Nick and Hacks
+// Tom and Nick are good friends.Once Tom asked Nick exactly N rupees, but Nick has only 1 rupee in his bank account.
+// Nick wants to help his friend so he wrote two hacks First hack can multiply the amount of money he owns by 10,while the second can multiply it by 20. These hacks can be used any number of times.Can Nick help Tom with his hacks?
+
+// 5
+// 1
+// 2
+// 10
+// 25
+// 200
+
+function nick(k,cur){
+    if(k===cur){
+        return true
+    }
+    if(cur>k){
+        return false
+    }
+    return nick(k,cur*10) || nick(k,cur*20)
+}
+let cur=1
+    nick(k,cur);
+if(nick(k,cur)===true){
+   console.log("Yes");
+}
+else if(nick(k,cur)===false){
+    console.log("No");
+}
