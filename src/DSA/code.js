@@ -368,3 +368,27 @@ function binarysearchrecursive(arr,l,r,n,k){
     }
 }
 return -1;
+
+
+// Upper Bound in LogN
+// You are given n different numbers and an integer k. Write a program that finds upper bound of k in log(n) time complexity. Upper bound of a number k in a sorted list is the index of the first number which is greater than k (here the answer is given considering index to be starting from 0)
+// -> Test cases are such that there is always one number greater than k
+// 10 3
+// 0 2 4 4 5 5 7 7 9 10
+
+function upper(){
+    let l=1;
+    let r=n-1;
+    let i;
+    while(l<=r){
+        mid= Math.floor(l+(r-l)/2);
+        if(arr[mid]<=k){
+            l=mid+1;
+        }
+        else{
+            i=mid;
+            r=mid-1;
+        }
+    }
+}
+console.log(i);
