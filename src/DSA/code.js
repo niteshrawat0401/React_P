@@ -406,8 +406,8 @@ let l3= 0;
 let r3=n-1;
 let nums= arr[0]
 while(l3<=r3){
-    mid= Math.floor(l3+r3);
-    if(arr[mid]>nums){
+    mid= Math.floor((l3+r3)/2);
+    if(arr[mid]> nums){
         l3=mid-1;
     }
     else{
@@ -415,3 +415,22 @@ while(l3<=r3){
     }
 }
 return nums;
+
+// The Peak Point
+// Given an array of size n, which is strictly increasing and then strictly decreasing in order. Find out the index (0-based) which is the peak of the array.
+// Note that the extremities are not considered as peak and there exists a peak which is not at index 0 or at n-1.
+// 2
+// 3
+// 10 20 11
+// 5
+// 1 3 6 5 4
+
+function peakpoint(arr,n){
+    for(let i=0;i<n;i++){
+        if(arr[i]>arr[i+1] && arr[i]>arr[i-1]){
+            return i
+        }
+    }
+    return -1;
+}
+console.log(peakpoint(arr,n));
