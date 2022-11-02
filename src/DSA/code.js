@@ -392,3 +392,26 @@ function upper(){
     }
 }
 console.log(i);
+
+
+// Minimum in sorted & rotated array
+// Given an array of length n, and it is sorted and rotated at some unknown point, find the minimum element in it.
+// In a sorted & rotated array,  we rotate an ascending order sorted array at some pivot unknown to you beforehand. So for instance, 1 2 3 4 5 might become 3 4 5 1 2.
+// Please note that the linear search approach with the time complexity of O(n) can easily be applied. But you are expected to solve it in O(log n) time complexity
+// 10
+// 4 6 7 9 10 -1 0 1 2 3
+
+arr.sort((a,b)=> a-b);
+let l3= 0;
+let r3=n-1;
+let nums= arr[0]
+while(l3<=r3){
+    mid= Math.floor(l3+r3);
+    if(arr[mid]>nums){
+        l3=mid-1;
+    }
+    else{
+        r3=mid+1
+    }
+}
+return nums;
