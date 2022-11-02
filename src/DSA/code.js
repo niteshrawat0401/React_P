@@ -434,3 +434,31 @@ function peakpoint(arr,n){
     return -1;
 }
 console.log(peakpoint(arr,n));
+
+// Coding Club Fight
+// Piyush went to fight for Coding Club. There were N soldiers with various powers. 
+// There will be Q rounds to fight and in each round Piyush's power will be varied. With power M, Piyush can kill all the soldiers whose power is less than or equal to M(<=M).
+//  After each round, All the soldiers who are dead in previous round will reborn.Such that in each round there will be N soldiers to fight.
+//  Count the number of soldiers that he can kill in each round and total sum of their powers.
+// 7
+// 1 
+// 2 
+// 3 
+// 4 
+// 5 
+// 6 
+// 7
+// 3
+// 3
+// 10
+// 2
+
+let sum=0;
+let count4=0;
+for(let i=0;i<n;i++){
+    if(arr[i]<=l){
+        count4++;
+        sum+=arr[i];
+    }
+}
+console.log(count4,sum);
