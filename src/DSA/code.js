@@ -482,4 +482,27 @@ while(l4<=h4){
         l4=mid+1;
     }
 }
-return res
+return res;
+
+
+// Find last positions of an element in a sorted array
+// 1, 3, 5, 5, 5, 5, 67, 123, 125
+// key = 5
+
+let l5= 0;
+let h5= n-1;
+let re= -1;
+while(l5<=h5){
+    mid= Math.floor((l5+h5)/2);
+    if(arr[mid]==key){
+        res=mid;
+        l5= mid+1;
+    }
+    else if(arr[mid]>key){
+        h5=mid-1;
+    }
+    else if(arr[mid]<key){
+        l5=mid+1;
+    }
+}
+return re;
