@@ -462,3 +462,24 @@ for(let i=0;i<n;i++){
     }
 }
 console.log(count4,sum);
+
+// Find first positions of an element in a sorted array
+// 1, 3, 5, 5, 5, 5, 67, 123, 125
+// key = 5
+let l4=0;
+let h4=n-1;
+let res= -1;
+while(l4<=h4){
+    mid= Math.floor((l4+h4)/2);
+    if(arr[mid]==key){
+        res=mid;
+        h4=mid-1;
+    }
+    else if(arr[mid]>key){
+        h4=mid-1;
+    }
+    else if(arr[mid]<key){
+        l4=mid+1;
+    }
+}
+return res
