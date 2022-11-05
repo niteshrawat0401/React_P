@@ -506,3 +506,21 @@ while(l5<=h5){
     }
 }
 return re;
+
+
+// find the peak element
+// Input: nums = [1,2,3,1]
+// Output: 2
+// Explanation: 3 is a peak element and your function should return the index number 2.
+
+let start = 0;
+let end = nums.length - 1;
+while (start < end) {t
+    let mid = Math.floor(start + (end - start) / 2);
+    if (nums[mid] > nums[mid + 1]) {
+        end = mid;
+    } else if (nums[mid] < nums[mid + 1]) {
+        start = mid + 1;
+    }
+}
+return start;
