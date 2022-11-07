@@ -548,7 +548,6 @@ for(let i=digits.length-1;i>=0;i--){
 // Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
 // You must write an algorithm with O(log n) runtime complexity.
 
-
 // Input: nums = [1,3,5,6], target = 5
 // Output: 2
 
@@ -567,3 +566,23 @@ for(let i=digits.length-1;i>=0;i--){
         }
     }
     return l;
+
+// Search a 2D Matrix
+// Write an efficient algorithm that searches for a value target in an m x n integer matrix matrix. This matrix has the following properties:
+// Input: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 3
+// Output: true
+
+    let left=0;
+    let right=matrix[0].length-1;
+    while(left<right){
+        if(matrix[left][right]== target){
+            return true;
+        }
+        else if(matrix[left][right]> target){
+            right--;
+        }
+        else{
+            left++;
+        }
+    }
+    return false;
