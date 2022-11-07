@@ -610,3 +610,26 @@ for(let i=digits.length-1;i>=0;i--){
         }
     }
     return max;
+
+    // Maximum Occurring Element
+    // Given an array A of N integers. Your task is to print that integer which presents maximum number of times in the given array.
+    // 5
+    // 0 2 0 6 9
+
+    let object={};
+    for(let i=0;i<n;i++){
+        if(arr[i]== undefined){
+            object[arr[i]]=1;
+        }
+        else{
+            object[arr[i]]= object[arr[i]]+1;
+        }
+    }
+    let max1= -1;
+    for(let key in object){
+        if(obj[key]> max1){
+            max1= obj[key];
+            num=key
+        }
+    }
+    console.log(num);
