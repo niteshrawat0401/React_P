@@ -586,3 +586,27 @@ for(let i=digits.length-1;i>=0;i--){
         }
     }
     return false;
+
+// Find Lucky Integer in an Array
+// Given an array of integers arr, a lucky integer is an integer that has a frequency in the array equal to its value.
+// Input: arr = [2,2,3,4]
+// Output: 2
+// Explanation: The only lucky number in the array is 2 because frequency[2] == 2.
+
+
+    let obj={};
+    for(let i=0;i<n;i++){
+        if(arr[i]===undefined){
+            obj[arr[i]]=1;
+        }
+        else{
+            obj[arr[i]]= obj[arr[i]]+1;
+        }
+    }
+    let max= -1;
+    for(let key in obj){
+        if(obj[key]== key && obj[key]> max){
+            max= obj[key];
+        }
+    }
+    return max;
