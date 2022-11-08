@@ -731,3 +731,18 @@ else if(n%3==1){
 }
  return (ispowerofThree(n/3))
 }
+
+// Power of Four
+// Given an integer n, return true if it is a power of four. Otherwise, return false.
+
+ if(n<=0){
+        return false;
+    }
+    for(let i=0;i<n;i++){
+        if(4**i===n){
+            return true;
+        }
+        else if(4**i>n){
+            return false;
+        }
+    }
