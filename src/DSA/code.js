@@ -700,3 +700,21 @@ for(let i=0;i<n;i++){
         return false;
     }
 }
+
+// Power of Three
+// Given an integer n, return true if it is a power of three. Otherwise, return false.
+// Input: n = 27
+// Output: true
+// Explanation: 27 = 33
+
+if(n<=0){
+    return false;
+}
+for(let i=0;i<n;i++){
+    if(3**i==n){
+        return true;
+    }
+    else if(3**i>n){
+        return false;
+    }
+}
