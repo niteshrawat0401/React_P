@@ -718,3 +718,16 @@ for(let i=0;i<n;i++){
         return false;
     }
 }
+// in recursion ispowerofThree
+function ispowerofThree(){
+if(n<1){
+    return false;
+}
+else if(n==1){
+    return true;
+}
+else if(n%3==1){
+    return false;
+}
+ return (ispowerofThree(n/3))
+}
