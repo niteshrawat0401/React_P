@@ -655,3 +655,24 @@ while(left1<right1){
     }
 }
 return true
+
+
+// Single Number
+// Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
+// Input: nums = [2,2,1]
+// Output: 1
+
+let obj1= {};
+for(let i=0;i<n;i++){
+    if(arr[i]==undefined){
+        obj1[arr[i]]=1;
+    }
+    else{
+        obj1[arr[i]]= obj1[arr[i]]+1;
+    }
+}
+    for(let key in obj1){
+        if(obj1[key]==1){
+            return key;
+        }
+    }
