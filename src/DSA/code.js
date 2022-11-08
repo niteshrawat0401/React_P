@@ -676,3 +676,27 @@ for(let i=0;i<n;i++){
             return key;
         }
     }
+
+// Kth Largest Element in an Array 
+// Given an integer array nums and an integer k, return the kth largest element in the array.
+// Note that it is the kth largest element in the sorted order, not the kth distinct element.
+// Input: nums = [3,2,1,5,6,4], k = 2
+// Output: 5
+
+    nums.sort((a,b)=> b-a);
+    return nums[k-1];
+
+// Power of Two  
+// Given an integer n, return true if it is a power of two. Otherwise, return false.
+
+    if(n<0){
+        return false;
+    }
+    for(let i=0;i<n;i++){
+    if(2**i==n){
+        return true;
+    }
+    else if(2**i>n){
+        return false;
+    }
+}
