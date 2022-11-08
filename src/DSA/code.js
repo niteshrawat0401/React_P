@@ -626,6 +626,7 @@ for(let i=digits.length-1;i>=0;i--){
         }
     }
     let max1= -1;
+    let num;
     for(let key in object){
         if(obj[key]> max1){
             max1= obj[key];
@@ -633,3 +634,24 @@ for(let i=digits.length-1;i>=0;i--){
         }
     }
     console.log(num);
+
+
+// Palindrome Number
+// Given an integer x, return true if x is a palindrome, and false otherwise.
+// Input: x = 121
+// Output: true
+// Explanation: 121 reads as 121 from left to right and from right to left.
+
+let str= x.toString();
+let left1= 0;
+let right1= str.length-1;
+while(left1<right1){
+    if(str[left1]!=str[right1]){
+        return false;
+    }
+    else{
+        left1++;
+        right1++;
+    }
+}
+return true
