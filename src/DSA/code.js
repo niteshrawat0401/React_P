@@ -746,3 +746,31 @@ else if(n%3==1){
             return false;
         }
     }
+
+
+// Valid Palindrome II
+// Given a string s, return true if the s can be palindrome after deleting at most one character from it.
+// Input: s = "aba"
+// Output: true
+
+let left2=0;
+let right2= n-1;
+while(left2<right2){
+    if(s[left2]!=s[right2]){
+        palindrome(s,left2+1,right2) || palindrome(s,left2,right2-1);
+    }
+    left2++;
+    right2--;
+}
+return true;
+
+function palindrome(s,left2,right2){
+    if(s[left2]!=s[right2]){
+        return false;
+    }
+    else{
+        left2++;
+        right2--;
+    }
+}
+return true;
