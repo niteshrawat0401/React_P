@@ -796,3 +796,40 @@ for(let i=0;i<n;i++){
     left3+= nums[i];
 }
 return -1;
+
+// Lemonade Change
+// Input: bills = [5,5,5,10,20]
+// Output: true
+// Explanation: 
+// From the first 3 customers, we collect three $5 bills in order.
+// From the fourth customer, we collect a $10 bill and give back a $5.
+// From the fifth customer, we give a $10 bill and a $5 bill.
+// Since all customers got correct change, we output true.
+
+let five=0;
+let ten=0;
+for(let i=0;i<n;i++){
+    if(bills[i]==5){
+        five++;
+    }
+    else if(bills[i]==10){
+        if(five==0){
+            return false;
+        }
+        five--;
+        ten++;
+    }
+    else{
+        if(ten>=1 && five>=1){
+            ten--;
+            five--;
+        }
+        else if(five>=3){
+            five=five-3
+        }
+        else{
+            return false
+        }
+    }
+}
+return true;
