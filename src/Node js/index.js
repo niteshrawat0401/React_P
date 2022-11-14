@@ -12,13 +12,23 @@ const app = express()
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
 // app.use(express.static(publicPath))
-app.get("/home", (req,res)=>{
-    res.sendFile(`${publicPath}/home.html`)
+// app.get("/home", (req,res)=>{
+//     res.sendFile(`${publicPath}/home.html`)
+// })
+// app.get("*", (req,res)=>{
+//     res.sendFile(`${publicPath}/nopage.html`)
+// })
+
+app.get('/home', function(req,res,next){
+
+// res.send('hello') 
+console.log("hello"); 
+next()
+},function(req,res  ,next){
+    res.send('word') 
+console.log("world"); 
+next()
 })
-app.get("*", (req,res)=>{
-    res.sendFile(`${publicPath}/nopage.html`)
-})
-app.get('/', (req,res) => res.send('hello'))
 
 app.listen(8080, () => {console.log('Server started on http://localhost:8080')})
 

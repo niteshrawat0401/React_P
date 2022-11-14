@@ -6,4 +6,4 @@ console.log(buf.toString());
 
 var buf2= Buffer.from("Wellcome");
 console.log(buf2.length);
-console.log(buf2.toJSON());
+console.log(buf2.toJSON());0
