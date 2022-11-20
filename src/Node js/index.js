@@ -7,18 +7,18 @@ const publicPath= path.join(__dirname, "public")
 // const dirPath= path.join(__dirname, "crud");
 // const filePath = `${dirPath}/apple.txt`;
 
-// const app = express()
+const app = express()
 
-// app.use(express.urlencoded({extended: true}))
-// app.use(express.json());
+app.use(express.urlencoded({extended: true}))
+app.use(express.json());
 
-// app.use(express.static(publicPath))
-// app.get("/home", (req,res)=>{
-//     res.sendFile(`${publicPath}/home.html`)
-// })
-// app.get("*", (req,res)=>{
-//     res.sendFile(`${publicPath}/nopage.html`)
-// })
+app.use(express.static(publicPath))
+app.get("/home", (req,res)=>{
+    res.sendFile(`${publicPath}/home.html`)
+})
+app.get("*", (req,res)=>{
+    res.sendFile(`${publicPath}/nopage.html`)
+})
 
 // Routes middlware
 // app.get('/home', function(req,res,next){
@@ -32,7 +32,7 @@ const publicPath= path.join(__dirname, "public")
 // next()
 // })
 
-// app.listen(8080, () => {console.log('Server started on http://localhost:8080')})
+app.listen(8080, () => {console.log('Server started on http://localhost:8080')})
 
 
 
