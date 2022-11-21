@@ -3,6 +3,8 @@
 // console.log(buf);
 // console.log(buf.toString());
 
+const { application } = require("express");
+
 
 // var buf2= Buffer.from("Wellcome");
 // console.log(buf2.length);
@@ -10,20 +12,27 @@
 const express = require("express");
 const app= express();
 
-// app.use(express.urlencoded({extended: true}));
-// app.use(express.json());
-app.use(express.urlencoded({extended: true}))
-
-app.get("/",(req,res)=>{
-    res.send("Hello World");
-})
-app.listen(8080,()=>{console.log("server stsareted in on http://localhost:8080")})
-// const express = require('express')
-
-// const app = express()
-
+// // app.use(express.urlencoded({extended: true}));
+// // app.use(express.json());
 // app.use(express.urlencoded({extended: true}))
-// app.use(express.json())
-// app.get('/', (req,res) => res.send('hello'))
 
-// app.listen(8080, () => {console.log('Server started on http://localhost:8080')})
+// app.get("/",(req,res)=>{
+//     res.send("Hello World");
+// })
+// app.listen(8080,()=>{console.log("server stsareted in on http://localhost:8080")})
+
+app.post("/", (req,res)=>{
+    const user= new userProfile(req.body);
+    user.save((err, success)=>{
+        try {
+            return res.status(201).send({ message: "post data", user: success["_doc"]});
+        } catch (err) {
+            return res.status(500).send({message: "err"})
+        }
+    })
+})
+app.get("/home/:id", (req,res)=>{
+    const query= req.query;
+    const user= userProfile.find(query);
+    res.send.user
+})
