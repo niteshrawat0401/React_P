@@ -22,7 +22,7 @@ function App() {
     <div className="App">
       {/* <StudentDetails/> */}
       {/* <Display/> */}
-      <Button/>
+      {/* <Button/> */}
       {/* <Toggle/> */}
       {/* <UseMemo/> */}
       {/* <Serach placeholder="Enter a Book Name..." data={BookData}/> */}

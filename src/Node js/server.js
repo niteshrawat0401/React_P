@@ -3,9 +3,6 @@
 // console.log(buf);
 // console.log(buf.toString());
 
-const { application } = require("express");
-
-
 // var buf2= Buffer.from("Wellcome");
 // console.log(buf2.length);
 // console.log(buf2.toJSON());
@@ -14,7 +11,6 @@ const app= express();
 
 // // app.use(express.urlencoded({extended: true}));
 // // app.use(express.json());
-// app.use(express.urlencoded({extended: true}))
 
 // app.get("/",(req,res)=>{
 //     res.send("Hello World");

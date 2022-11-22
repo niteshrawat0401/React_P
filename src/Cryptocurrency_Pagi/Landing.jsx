@@ -9,13 +9,21 @@ export const Landing = () => {
   const [pageNo, setPageNo] = useState(50);
 
   useEffect(() => {
-    let res = axios
-      .get(`https://api.coincap.io/v2/assets`)
-      .then((res) => {
-        // console.log("get data succesfully", res.data);
-        setData(res.data.data);
-      })
-      .catch((e) => console.log(e));
+    // let res = axios
+    //   .get(`https://api.coincap.io/v2/assets`)
+    //   .then((res) => {
+    //     // console.log("get data succesfully", res.data);
+    //     setData(res.data.data);
+    //   })
+    //   .catch((e) => console.log(e));
+    axios.get(`https://api.coincap.io/v2/assets`)
+    .then((res)=>{
+      console.log(res.data);
+      setData(res.data)
+    })
+    .catch((err)=>{
+      console.log(err);
+    })
   }, []);
 
   const showMoreItems = () => {
