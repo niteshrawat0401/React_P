@@ -16,6 +16,7 @@ import { Landing } from "./Cryptocurrency_Pagi/Landing";
 import { Infinte } from "./Infinte scroll/Infinte";
 import { UseMemo } from "./Button/UseMemo";
 import { StudentDetails } from "./table/StudentDetails";
+import { Usebtn } from "./Button/Usebtn";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       {/* <Button/> */}
       {/* <Toggle/> */}
       {/* <UseMemo/> */}
+      <Usebtn/>
       {/* <Serach placeholder="Enter a Book Name..." data={BookData}/> */}
       {/* <Infinte/> */}
       {/* <Todo/> */}
