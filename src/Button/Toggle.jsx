@@ -17,7 +17,7 @@ export const Toggle = () => {
           <h2 style={{ color: "#18c683" }}>Open Name</h2>
         )}
       </div>
-      <button onClick={handleClick}>Toggle</button>
+      <button onClick={handleClick}>Toggle1</button>
     </div>
   );
 };
