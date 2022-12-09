@@ -869,3 +869,20 @@ for(let i=0;i<nums.length;i++){
         no++;
     }
 }return no;
+
+
+// add zero at the end of array
+// let arr= [4,5,8,1,0,9,0,3];
+// output [4,5,8,1,9,3,0,0]
+let arr1=[]
+let arr2=[]
+for(let i=0;i<arr.length;i++){
+  if(arr[i]==0){
+    arr1.push(arr[i])
+  }
+  else{
+    arr2.push(arr[i])
+  }
+}
+let arr3= arr2.concat(arr1)
+console.log(arr3)
