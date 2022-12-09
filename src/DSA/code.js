@@ -847,3 +847,14 @@ for(let i=0;i<n;i++){
 }
 pro.sort((a,b)=> a-b);
 return pro;
+
+
+// Remove Duplicates from Sorted Array
+// Input: nums = [1,1,2]
+// Output: 2, nums = [1,2,_]
+let index=1;
+for(let i=0;i<nums.length;i++){
+    if(nums[i]!= nums[i-1]){
+        nums[index++]= nums[i];
+    }
+}return index;
