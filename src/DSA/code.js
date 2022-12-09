@@ -858,3 +858,14 @@ for(let i=0;i<nums.length;i++){
         nums[index++]= nums[i];
     }
 }return index;
+
+// Remove Element
+// Input: nums = [3,2,2,3], val = 3
+// Output: 2, nums = [2,2,_,_]
+let no= 1;
+for(let i=0;i<nums.length;i++){
+    if(nums[i]!== val){
+        nums[no]= nums[i];
+        no++;
+    }
+}return no;
