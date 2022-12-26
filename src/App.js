@@ -28,12 +28,12 @@ function App() {
       {/* <Toggle/> */}
       {/* <UseMemo/> */}
       {/* <Usebtn/> */}
-      <Useref/>
+      {/* <Useref/> */}
       {/* <Serach placeholder="Enter a Book Name..." data={BookData}/> */}
       {/* <Infinte/> */}
       {/* <Todo/> */}
       {/* <Home/> */}
-     {/* <Pagination/> */}
+     <Pagination/>
      {/* <Landing/> */}
       {/* <Routes>
         <Route path="/" element={<Puppy/>} />

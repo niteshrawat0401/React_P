@@ -13,7 +13,7 @@ export const Pagination = () => {
     const fetchPosts = async () => {
       setLoading(true);
       const res = await axios.get(
-        "https://movie-fake-server.herokuapp.com/products"
+        "https://jsonplaceholder.typicode.com/posts"
       );
       setPosts(res.data);
       setLoading(false);
