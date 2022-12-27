@@ -886,3 +886,8 @@ for(let i=0;i<arr.length;i++){
 }
 let arr3= arr2.concat(arr1)
 console.log(arr3)
+
+// Sqrt(x)
+// Input: x = 4
+// Output: 2
+    return Math.floor(Math.sqrt(x))
