@@ -1,0 +1,14 @@
+{
+   
+"students" :[
+    {
+    "name": "Chunnu",
+    "city": "Pune"
+    },
+    {
+    "name": "Munnu",
+    "city": "Delhi"
+    }
+    ]
+     
+}
