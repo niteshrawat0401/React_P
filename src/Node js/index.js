@@ -98,8 +98,10 @@ const publicPath= path.join(__dirname, "public")
 // }).listen(5000)
 
 
-// stub
+// stab
 // test paradise
 // web restfull services
 // req params and req query
 // url
+// test pyramid
+// concept promises in node js
