@@ -98,8 +98,9 @@ const publicPath= path.join(__dirname, "public")
 // }).listen(5000)
 
 
+// -----Questions----
 // stab
-// test paradise
+//manage file uploader in node.js
 // web restfull services
 // req params and req query
 // url
