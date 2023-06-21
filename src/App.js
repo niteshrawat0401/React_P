@@ -7,8 +7,8 @@ import Serach from "./Searchfilter/Serach";
 import BookData from "./Searchfilter/db.json";
 import { Todo } from "./Todo/pages/Todo";
 import { Route, Routes } from "react-router-dom";
-// import { Home } from "./Scooty/Home";
-// import {Display} from "./Scooty/Display"
+import { Home } from "./Scooty/Home";
+import {Display} from "./Scooty/Display"
 import { Puppy } from "./puppy love/Puppy";
 import { Puppyname } from "./puppy love/Puppyname";
 import { Pagination } from "./Pagination/Pagination";
@@ -18,8 +18,13 @@ import { UseMemo } from "./Button/UseMemo";
 import { StudentDetails } from "./table/StudentDetails";
 import { Usebtn } from "./Button/Usebtn";
 import Useref from "./Button/Useref";
+import { GoogleOAuthProvider } from '@react-oauth/google';
+import {Signin} from './googleauth/Signin'
+import AccountProvider from './googleauth/AccountProvider'
+import { Main } from "./googleauth/Main";
 
 function App() {
+  let clientId = '507262472563-jnmcgpmn8jpmlor1d8q68vutuptm87lm.apps.googleusercontent.com'
   return (
     <div className="App">
       {/* <StudentDetails/> */}
@@ -33,7 +38,7 @@ function App() {
       {/* <Infinte/> */}
       {/* <Todo/> */}
       {/* <Home/> */}
-     <Pagination/>
+     {/* <Pagination/> */}
      {/* <Landing/> */}
       {/* <Routes>
         <Route path="/" element={<Puppy/>} />
@@ -43,6 +48,11 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/dis/:id" element={<Display />} />
       </Routes> */}
+      <GoogleOAuthProvider clientId={clientId}>
+        <AccountProvider>
+        <Main/>
+        </AccountProvider>
+      </GoogleOAuthProvider>
     </div>
   );
 }
