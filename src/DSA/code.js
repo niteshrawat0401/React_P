@@ -919,3 +919,25 @@ var isValid = function(s) {
     }
     return true && !stack.length;
 };
+
+// let a = "nitin"
+// let b = "itnin"
+// let a = "abcde"
+// let b = "bcfda"
+flag =false
+for(let i=0;i<a.length;i++){
+    for(let j=0;j<b.length;j++){
+        if(a[i] === b[j])   {
+            flag =true
+        }
+        else if(a[i] !== b[j])   {
+            flag =false
+        }
+    }
+}
+if(flag === true){
+    console.log(true)
+}
+else{
+    console.log(false)
+}

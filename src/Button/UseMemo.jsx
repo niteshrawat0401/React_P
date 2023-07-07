@@ -13,17 +13,18 @@ export const UseMemo = () => {
     setCount2((counter2) => counter2 - 1);
   };
 
-  const isEven = useMemo(() => {
+  const isEven = () => {
+    console.log("abcd");
     let i = 0;
     while (i < 2000000000) i++;
     return counter1 % 2 === 0;
-  }, [counter1]);
+  }
 
   return (
     <div>
       <button onClick={counterone}>Count Inc: {counter1}</button>
       {/* Storing cash value of even function*/}
-      <span>{isEven ? "Even" : "odd"}</span>
+      <span>{isEven() ? "Even" : "odd"}</span>
       <button onClick={countertwo}>Count Dec: {counter2}</button>
     </div>
   );

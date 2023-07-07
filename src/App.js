@@ -31,7 +31,7 @@ function App() {
       {/* <Display/> */}
       {/* <Button/> */}
       {/* <Toggle/> */}
-      {/* <UseMemo/> */}
+      <UseMemo/>
       {/* <Usebtn/> */}
       {/* <Useref/> */}
       {/* <Serach placeholder="Enter a Book Name..." data={BookData}/> */}
@@ -48,11 +48,11 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/dis/:id" element={<Display />} />
       </Routes> */}
-      <GoogleOAuthProvider clientId={clientId}>
+      {/* <GoogleOAuthProvider clientId={clientId}>
         <AccountProvider>
         <Main/>
         </AccountProvider>
-      </GoogleOAuthProvider>
+      </GoogleOAuthProvider> */}
     </div>
   );
 }
