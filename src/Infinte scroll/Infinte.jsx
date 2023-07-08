@@ -1,64 +1,66 @@
 import axios from "axios";
 import React from "react";
-import { useEffect,useState } from "react";
+import { useEffect, useState } from "react";
 
 export const Infinte = () => {
-  const [coinsData, setCoinsData] = useState([]);
+  const [data, setData] = useState([]);
   const [page, setPage] = useState(1);
-  const [loading, setLoading] = useState(false);
+  const [loading, setIsloading] = useState(true);
+
+  const getData = async () => {
+   
+    const res = await fetch(
+      `https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-products?page=${page}&limit=5&orderBy=desc`
+    );
+    const data = await res.json();
+    console.log(data.data);
+    setData((preData) => [...preData, ...data.data]);
+    setIsloading(false);
+  };
 
   useEffect(() => {
-    setTimeout(() => {
-    //   const response = await
-       axios.get(
-        `https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-products?page=${page}&limit=10&orderBy=desc`)
-        .then((res)=>{
-            setCoinsData((prevData) => {
-              // not remove previous data also new data add
-                return [...prevData, ...res.data.data];
-              });
-        })
-      setLoading(false);
-    }, 1500);
+    setTimeout(()=>{
+      getData();
+    },1000)
   }, [page]);
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const handleScroll=() => {
-    if (
-      window.innerHeight + document.documentElement.scrollTop + 1 >=
-      document.documentElement.scrollHeight
-    ) {
-      setLoading(true);
-      setPage((prev) => prev + 1);
+  const handleScroll = async() => {
+    try {
+      if (
+        window.innerHeight + document.documentElement.scrollTop + 1 >=
+        document.documentElement.scrollHeight
+      ) {
+        setIsloading(true);
+        setPage((prev) => prev + 1);
+      }
+    } catch (error) {
+      console.log(error);
     }
   };
 
-  return (
-    <div className="app">
-      <h1>Product Gallery</h1>
-      {/* <CryptoList coinsData={coinsData} /> */}
-      <div className="crypto_list">
-        {coinsData.map((ele) => {
-          return (
-            // <CryptoCard
-            <div key={ele.id}>
-              <p>{ele.brand}</p>
-              <img style={{ height: "10rem" }} src={ele.image} alt="" />
-              <p> {ele.title}</p>
-              <p>{ele.category}</p>
-              <p>{ele.price}</p>
-            </div>
+  useEffect(() => {
+    document.addEventListener("scroll", handleScroll);
+    return () => {
+      document.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
-            // />
+  return (
+    <div>
+      {data?.length > 0 ? (
+        data?.map((ele, index) => {
+          return (
+            <div key={index}>
+              <img src={ele.image} alt="" />
+              <p>{ele.brand}</p>
+              <p>{ele.category}</p>
+            </div>
           );
-        })}
-      </div>
-      {loading && <p>....Loading</p>}
+        })
+      ) : (
+        <h2>NOt data</h2>
+      )}
+      {loading && <h1>Loading....</h1>}
     </div>
   );
 };

@@ -31,11 +31,11 @@ function App() {
       {/* <Display/> */}
       {/* <Button/> */}
       {/* <Toggle/> */}
-      <UseMemo/>
+      {/* <UseMemo/> */}
       {/* <Usebtn/> */}
       {/* <Useref/> */}
       {/* <Serach placeholder="Enter a Book Name..." data={BookData}/> */}
-      {/* <Infinte/> */}
+      <Infinte/>
       {/* <Todo/> */}
       {/* <Home/> */}
      {/* <Pagination/> */}
