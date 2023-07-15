@@ -10,10 +10,10 @@ export const Infinte = () => {
   const getData = async () => {
    
     const res = await fetch(
-      `https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-products?page=${page}&limit=5&orderBy=desc`
+      `https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-products?page=${page}&limit=10&orderBy=desc`
     );
     const data = await res.json();
-    console.log(data.data);
+    // console.log(data.data);
     setData((preData) => [...preData, ...data.data]);
     setIsloading(false);
   };
@@ -25,6 +25,9 @@ export const Infinte = () => {
   }, [page]);
 
   const handleScroll = async() => {
+    console.log(window.innerHeight);
+    console.log("scrollTop",document.documentElement.scrollTop);
+    console.log(document.documentElement.scrollHeight);
     try {
       if (
         window.innerHeight + document.documentElement.scrollTop + 1 >=
