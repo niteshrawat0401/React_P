@@ -943,18 +943,13 @@ else{
 }
 
 // Given a string s, find the length of the longest substring without repeating characters.
-// Input: s = "abcabcbb"
-// Output: 3
-// Explanation: The answer is "abc", with the length of 3.
+// Input: s = "abcabcbb" // Output: 3 // Explanation: The answer is "abc", with the length of 3.
 
 // Input: s = "bbbbb"
-// Output: 1
-// Explanation: The answer is "b", with the length of 1.
+// Output: 1 // Explanation: The answer is "b", with the length of 1.
 
 // Input: s = "pwwkew"
-// Output: 3
-// Explanation: The answer is "wke", with the length of 3.
-// Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
+// Output: 3 // Explanation: The answer is "wke", with the length of 3. // Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
 var lengthOfLongestSubstring = function(s) {
     let start = 0;
     let end = 0;
@@ -981,3 +976,29 @@ var lengthOfLongestSubstring = function(s) {
      return max
  
  };
+
+
+//  Given a string s, find the first non-repeating character in it and return its index. If it does not exist, return -1.
+// Input: s = "leetcode" // Output: 0 // Example 2:
+
+// Input: s = "loveleetcode" // Output: 2
+
+// Input: s = "aabb" // Output: -1
+
+ var firstUniqChar = function(s) {
+    let obj = {};
+    for(let i=0;i<s.length;i++){
+        if(obj[s[i]] === undefined){
+            obj[s[i]] = 1;
+        }
+        else{
+            obj[s[i]]++;
+        }
+    }
+    for(let j=0;j<s.length;j++){
+        if(obj[s[j]] === 1){
+            return j;
+        }
+    }
+    return -1;
+};
