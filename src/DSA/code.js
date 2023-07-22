@@ -1026,3 +1026,29 @@ function maximumOccurring(str){
 }
 let string = "geeksforgeeks";
 maximumOccurring(string)
+
+
+// Rotate String
+// Example 1:
+// Input: s = "abcde", goal = "cdeab"
+// Output: true
+// Example 2:
+// Input: s = "abcde", goal = "abced"
+// Output: false
+var rotateString = function(s, goal) {
+    let flag = false
+    let p = s.split("")
+     for(let i=0;i<s.length;i++){
+         let q =p.shift()
+         p.push(q)
+         let r = p.join("")
+         if(r === goal){
+             flag = true
+         }
+    }  
+    if(flag === true){
+        return true;
+    }
+        return false;
+
+};
