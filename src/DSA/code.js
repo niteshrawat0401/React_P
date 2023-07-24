@@ -1086,3 +1086,31 @@ var firstPalindrome = function(words) {
     }
     return true
 }
+
+// Input: strs = ["eat","tea","tan","ate","nat","bat"]
+// Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
+// Example 2:
+
+// Input: strs = [""]
+// Output: [[""]]
+// Example 3:
+
+// Input: strs = ["a"]
+// Output: [["a"]]
+var groupAnagrams = function(strs) {
+    let obj = {};
+    for(let i=0;i<strs.length;i++){
+        let s = strs[i].split("").sort().join("");
+        if(obj[s] === undefined){
+            obj[s] = [strs[i]];
+        }   
+        else{
+            obj[s].push(strs[i])
+        }
+    }
+    let arr = [];
+    for(let key in obj){
+        arr.push(obj[key])
+    }
+    return arr
+};
