@@ -8,25 +8,24 @@ export const Infinte = () => {
   const [loading, setIsloading] = useState(true);
 
   const getData = async () => {
-   
-    const res = await fetch(
+    let res = await fetch(
       `https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-products?page=${page}&limit=10&orderBy=desc`
     );
-    const data = await res.json();
-    // console.log(data.data);
-    setData((preData) => [...preData, ...data.data]);
+    let data = await res.json();
+    // console.log(data);
+    setData((pre) => [...pre, ...data.data]);
     setIsloading(false);
   };
 
   useEffect(() => {
-    setTimeout(()=>{
+    setTimeout(() => {
       getData();
-    },1000)
+    }, 1000);
   }, [page]);
 
-  const handleScroll = async() => {
+  const handleScroll = async () => {
     console.log(window.innerHeight);
-    console.log("scrollTop",document.documentElement.scrollTop);
+    console.log(document.documentElement.scrollTop);
     console.log(document.documentElement.scrollHeight);
     try {
       if (
@@ -34,7 +33,7 @@ export const Infinte = () => {
         document.documentElement.scrollHeight
       ) {
         setIsloading(true);
-        setPage((prev) => prev + 1);
+        setPage((page) => page + 1);
       }
     } catch (error) {
       console.log(error);
