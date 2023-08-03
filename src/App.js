@@ -22,6 +22,7 @@ import { GoogleOAuthProvider } from '@react-oauth/google';
 import {Signin} from './googleauth/Signin'
 import AccountProvider from './googleauth/AccountProvider'
 import { Main } from "./googleauth/Main";
+import Star from "./Button/Star";
 
 function App() {
   let clientId = '507262472563-jnmcgpmn8jpmlor1d8q68vutuptm87lm.apps.googleusercontent.com'
@@ -31,7 +32,7 @@ function App() {
       {/* <Display/> */}
       {/* <Button/> */}
       {/* <Toggle/> */}
-      <UseMemo/>
+      {/* <UseMemo/> */}
       {/* <Usebtn/> */}
       {/* <Useref/>/ */}
       {/* <Serach placeholder="Enter a Book Name..." data={BookData}/> */}
@@ -53,6 +54,8 @@ function App() {
         <Main/>
         </AccountProvider>
       </GoogleOAuthProvider> */}
+
+      <Star/>
     </div>
   );
 }
