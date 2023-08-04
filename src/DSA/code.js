@@ -1204,6 +1204,7 @@ let arr = [6,5,6,12,18,5,18,9]
             // console.log(max);
         }
     }
+    console.log(max);
     // [1,2,5,13,14,17,18]
     // for (i = a.length - 2; i >= 0; i--) {
     //     // if the element is not
@@ -1213,4 +1214,18 @@ let arr = [6,5,6,12,18,5,18,9]
     //         return;
     //     }
     // }
-    console.log(max);
+
+
+// Input: arr = [1,0,2,3,0,4,5,0]
+// Output: [1,0,0,2,3,0,0,4]
+// Explanation: After calling your function, the input array is modified to: [1,0,0,2,3,0,0,4]
+    var duplicateZeros = function(arr) {
+      for(let i=0;i<arr.length;i++){
+          if(arr[i] === 0){
+              arr.splice(i, 0, 0);
+              arr.pop()
+              i++
+          }
+      }
+      return arr
+ };
