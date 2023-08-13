@@ -1232,7 +1232,7 @@ let arr = [6,5,6,12,18,5,18,9]
 
 
 //  Given an integer n, return an array ans of length n + 1 such that for each i (0 <= i <= n), ans[i] is the number of 1's in the binary representation of i.
- Example 1:
+//  Example 1:
 //  Input: n = 2
 //  Output: [0,1,1]
 //  Explanation:
@@ -1262,3 +1262,43 @@ let arr = [6,5,6,12,18,5,18,9]
   }
   return ans;
 };
+
+
+function SearchingChallenge(str) { 
+    let min = -Infinity;
+    let word;
+    for (let i = 0; i < str.length; i++) {
+        var bag = "";
+        for (let j = i; j < str.length; j++) {
+            bag += str[j];
+            let x = palindrome(bag);
+            if (x == true) {
+                if (bag.length > min) {
+                    min = bag.length;
+                    word = bag;
+                }
+            }
+        }
+    }
+  
+    if (min > 2) {
+        return word;
+    } else {
+        return "none";
+    }
+}
+
+function palindrome(bag) {
+    let str1 = "";
+    for (let k = bag.length - 1; k >= 0; k--) {
+        str1 += bag[k];
+    }
+    if (str1 == bag) {
+        return true;
+    }
+    return false;
+}
+
+// Example usage
+console.log(SearchingChallenge("hellosannasmith")); // Output: sannas
+console.log(SearchingChallenge("abcdefgg"));        // Output: none
