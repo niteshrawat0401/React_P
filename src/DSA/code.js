@@ -1302,3 +1302,50 @@ function palindrome(bag) {
 // Example usage
 console.log(SearchingChallenge("hellosannasmith")); // Output: sannas
 console.log(SearchingChallenge("abcdefgg"));        // Output: none
+
+
+// Matrix Challenge
+function MatrixChallenge(strArr) {
+  const matrix = strArr.map(row => JSON.parse(row));
+  const numRows = matrix.length;
+  const numCols = matrix[0].length;
+  let result = [];
+
+  let top = 0, bottom = numRows - 1, left = 0, right = numCols - 1;
+
+  while (top <= bottom && left <= right) {
+      // Traverse right
+      for (let i = left; i <= right; i++) {
+          result.push(matrix[top][i]);
+      }
+      top++;
+
+      // Traverse down
+      for (let i = top; i <= bottom; i++) {
+          result.push(matrix[i][right]);
+      }
+      right--;
+
+      // Traverse left
+      if (top <= bottom) {
+          for (let i = right; i >= left; i--) {
+              result.push(matrix[bottom][i]);
+          }
+          bottom--;
+      }
+
+      // Traverse up
+      if (left <= right) {
+          for (let i = bottom; i >= top; i--) {
+              result.push(matrix[i][left]);
+          }
+          left++;
+      }
+  }
+
+  return result.join(',');
+}
+
+// Test cases
+console.log(MatrixChallenge(["[1, 2]", "[10, 14]"])); // Output: 1,2,14,10
+console.log(MatrixChallenge(["[4, 5, 6, 5]", "[1, 1, 2, 2]", "[5, 4, 2, 9]"])); // Output: 4,5,6,5,2,9,2,4,5,1,1,2
