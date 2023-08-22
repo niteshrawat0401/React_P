@@ -1406,3 +1406,17 @@ for(let i=1;i<=10;i++){
     console.log(amul);
     amul = amul * 2
 }
+
+// Input: reverseWords("Hello world! This is a test.")
+// Output: "olleH !dlrow sihT si a .tset"
+
+function reverseWords(){
+    let bag = [];
+    let words = str.split(" ");
+    for(let i=0;i<words.length;i++){
+        p = words[i].split("").reverse().join("");
+        bag.push(p)
+    }
+    console.log(bag.join(""));
+}
+reverseWords()
