@@ -1383,3 +1383,18 @@ var haveConflict = function(event1, event2) {
     // console.log(hours  * 60 + minutes)
     return hours * 60 + minutes;
     }
+
+
+// 1
+// 2 3
+// 4 5 6
+// 7 8 9 10
+let count = 1
+for(let i=1;i<=4;i++){
+    let bag = "";
+    for(let j=1;j<=i;j++){
+        bag += count+" ";
+        count++;
+    }
+    console.log(bag);
+}

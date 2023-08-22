@@ -13,12 +13,18 @@ export const UseMemo = () => {
     setCount2((counter2) => counter2 - 1);
   };
 
-  const isEven = useMemo(() => {
-    console.log("abcd");
-    let i = 0;
-    while (i < 2000000000) i++;
-    return counter1 % 2 === 0;
-  },[counter1])
+  // const isEven = useMemo(() => {
+  //   console.log("abcd");
+  //   let i = 0;
+  //   while (i < 2000000000) i++;
+  //   return counter1 % 2 === 0;
+  // },[counter1])
+
+  const isEven = useMemo(() =>{
+    let i=0;
+    while(i < 100000000) i++;
+    return counter1 % 2 == 0
+  }, [counter1])
 
   return (
     <div>
