@@ -1219,16 +1219,16 @@ let arr = [6,5,6,12,18,5,18,9]
 // Input: arr = [1,0,2,3,0,4,5,0]
 // Output: [1,0,0,2,3,0,0,4]
 // Explanation: After calling your function, the input array is modified to: [1,0,0,2,3,0,0,4]
-    var duplicateZeros = function(arr) {
-      for(let i=0;i<arr.length;i++){
-          if(arr[i] === 0){
-              arr.splice(i, 0, 0);
-              arr.pop()
-              i++
-          }
-      }
-      return arr
- };
+//     var duplicateZeros = function(arr) {
+//       for(let i=0;i<arr.length;i++){
+//           if(arr[i] === 0){
+//               arr.splice(i, 0, 0);
+//               arr.pop()
+//               i++
+//           }
+//       }
+//       return arr
+//  };
 
 
 //  Given an integer n, return an array ans of length n + 1 such that for each i (0 <= i <= n), ans[i] is the number of 1's in the binary representation of i.
@@ -1249,174 +1249,194 @@ let arr = [6,5,6,12,18,5,18,9]
 //  3 --> 11
 //  4 --> 100
 //  5 --> 101
- var countBits = function(n) {
-    const ans = new Array(n + 1).fill(0);
-    console.log(ans)
-   for (let i = 0; i <= n; i++) {
-    if (i % 2 === 0) {
-      ans[i] = ans[i / 2];
+//  var countBits = function(n) {
+//     const ans = new Array(n + 1).fill(0);
+//     console.log(ans)
+//    for (let i = 0; i <= n; i++) {
+//     if (i % 2 === 0) {
+//       ans[i] = ans[i / 2];
 
-    } else {
-      ans[i] = ans[Math.floor(i / 2)] + 1;
-    }
-  }
-  return ans;
-};
+//     } else {
+//       ans[i] = ans[Math.floor(i / 2)] + 1;
+//     }
+//   }
+//   return ans;
+// };
 
 
-function SearchingChallenge(str) { 
-    let min = -Infinity;
-    let word;
-    for (let i = 0; i < str.length; i++) {
-        var bag = "";
-        for (let j = i; j < str.length; j++) {
-            bag += str[j];
-            let x = palindrome(bag);
-            if (x == true) {
-                if (bag.length > min) {
-                    min = bag.length;
-                    word = bag;
-                }
-            }
-        }
-    }
+// function SearchingChallenge(str) { 
+//     let min = -Infinity;
+//     let word;
+//     for (let i = 0; i < str.length; i++) {
+//         var bag = "";
+//         for (let j = i; j < str.length; j++) {
+//             bag += str[j];
+//             let x = palindrome(bag);
+//             if (x == true) {
+//                 if (bag.length > min) {
+//                     min = bag.length;
+//                     word = bag;
+//                 }
+//             }
+//         }
+//     }
   
-    if (min > 2) {
-        return word;
-    } else {
-        return "none";
+//     if (min > 2) {
+//         return word;
+//     } else {
+//         return "none";
+//     }
+// }
+
+// function palindrome(bag) {
+//     let str1 = "";
+//     for (let k = bag.length - 1; k >= 0; k--) {
+//         str1 += bag[k];
+//     }
+//     if (str1 == bag) {
+//         return true;
+//     }
+//     return false;
+// }
+
+// // Example usage
+// console.log(SearchingChallenge("hellosannasmith")); // Output: sannas
+// console.log(SearchingChallenge("abcdefgg"));        // Output: none
+
+
+// // Matrix Challenge
+// function MatrixChallenge(strArr) {
+//   const matrix = strArr.map(row => JSON.parse(row));
+//   const numRows = matrix.length;
+//   const numCols = matrix[0].length;
+//   let result = [];
+
+//   let top = 0, bottom = numRows - 1, left = 0, right = numCols - 1;
+
+//   while (top <= bottom && left <= right) {
+//       // Traverse right
+//       for (let i = left; i <= right; i++) {
+//           result.push(matrix[top][i]);
+//       }
+//       top++;
+
+//       // Traverse down
+//       for (let i = top; i <= bottom; i++) {
+//           result.push(matrix[i][right]);
+//       }
+//       right--;
+
+//       // Traverse left
+//       if (top <= bottom) {
+//           for (let i = right; i >= left; i--) {
+//               result.push(matrix[bottom][i]);
+//           }
+//           bottom--;
+//       }
+
+//       // Traverse up
+//       if (left <= right) {
+//           for (let i = bottom; i >= top; i--) {
+//               result.push(matrix[i][left]);
+//           }
+//           left++;
+//       }
+//   }
+
+//   return result.join(',');
+// }
+
+// // Test cases
+// console.log(MatrixChallenge(["[1, 2]", "[10, 14]"])); // Output: 1,2,14,10
+// console.log(MatrixChallenge(["[4, 5, 6, 5]", "[1, 1, 2, 2]", "[5, 4, 2, 9]"])); // Output: 4,5,6,5,2,9,2,4,5,1,1,2
+
+
+// // Example 1:
+
+//  event1 = ["01:15","02:00"], event2 = ["02:00","03:00"]
+// // Output: true
+// // Explanation: The two events intersect at time 2:00.
+// // Example 2:
+
+// // Input: event1 = ["01:00","02:00"], event2 = ["01:20","03:00"]
+// // Output: true
+// // Explanation: The two events intersect starting from 01:20 to 02:00.
+// // Example 3:
+
+// // Input: event1 = ["10:00","11:00"], event2 = ["14:00","15:00"]
+// // Output: false
+// // Explanation: The two events do not intersect.
+
+// var haveConflict = function(event1, event2) {
+//     let start1 = convertTimetoMinute(event1[0])
+//     let end1 = convertTimetoMinute(event1[1])
+//     let start2 = convertTimetoMinute(event2[0])
+//     let end2 = convertTimetoMinute(event2[1])
+//      if (end1 >= start2 && start1 <= end2) {
+//         return true; // Conflict
+//     }
+//     return false
+
+// };
+//     function convertTimetoMinute(time){
+//     const [hours, minutes] = time.split(":").map(Number);
+//     // console.log(hours  * 60 + minutes)
+//     return hours * 60 + minutes;
+//     }
+
+
+// // 1
+// // 2 3
+// // 4 5 6
+// // 7 8 9 10
+// let count = 1
+// for(let i=1;i<=4;i++){
+//     let bag = "";
+//     for(let j=1;j<=i;j++){
+//         bag += count+" ";
+//         count++;
+//     }
+//     console.log(bag);
+// }
+
+// // 2,4,8,32,…. 
+// // Please print this series, you have just 2 as first input
+// let amul = 2;
+// for(let i=1;i<=10;i++){
+//     console.log(amul);
+//     amul = amul * 2
+// }
+
+// // Input: reverseWords("Hello world! This is a test.")
+// // Output: "olleH !dlrow sihT si a .tset"
+
+// function reverseWords(){
+//     let bag = [];
+//     let words = str.split(" ");
+//     for(let i=0;i<words.length;i++){
+//         p = words[i].split("").reverse().join("");
+//         bag.push(p)
+//     }
+//     console.log(bag.join(""));
+// }
+// reverseWords()
+
+// groupByAge
+function groupByAge(people){
+    let obj = {};
+    for(let person of people){
+        let {name, age} = person;
+        if(!obj[age]){
+            obj[age] = [];
+        }
+        obj[age].push(name)
     }
+    console.log(obj);
 }
-
-function palindrome(bag) {
-    let str1 = "";
-    for (let k = bag.length - 1; k >= 0; k--) {
-        str1 += bag[k];
-    }
-    if (str1 == bag) {
-        return true;
-    }
-    return false;
-}
-
-// Example usage
-console.log(SearchingChallenge("hellosannasmith")); // Output: sannas
-console.log(SearchingChallenge("abcdefgg"));        // Output: none
-
-
-// Matrix Challenge
-function MatrixChallenge(strArr) {
-  const matrix = strArr.map(row => JSON.parse(row));
-  const numRows = matrix.length;
-  const numCols = matrix[0].length;
-  let result = [];
-
-  let top = 0, bottom = numRows - 1, left = 0, right = numCols - 1;
-
-  while (top <= bottom && left <= right) {
-      // Traverse right
-      for (let i = left; i <= right; i++) {
-          result.push(matrix[top][i]);
-      }
-      top++;
-
-      // Traverse down
-      for (let i = top; i <= bottom; i++) {
-          result.push(matrix[i][right]);
-      }
-      right--;
-
-      // Traverse left
-      if (top <= bottom) {
-          for (let i = right; i >= left; i--) {
-              result.push(matrix[bottom][i]);
-          }
-          bottom--;
-      }
-
-      // Traverse up
-      if (left <= right) {
-          for (let i = bottom; i >= top; i--) {
-              result.push(matrix[i][left]);
-          }
-          left++;
-      }
-  }
-
-  return result.join(',');
-}
-
-// Test cases
-console.log(MatrixChallenge(["[1, 2]", "[10, 14]"])); // Output: 1,2,14,10
-console.log(MatrixChallenge(["[4, 5, 6, 5]", "[1, 1, 2, 2]", "[5, 4, 2, 9]"])); // Output: 4,5,6,5,2,9,2,4,5,1,1,2
-
-
-// Example 1:
-
- event1 = ["01:15","02:00"], event2 = ["02:00","03:00"]
-// Output: true
-// Explanation: The two events intersect at time 2:00.
-// Example 2:
-
-// Input: event1 = ["01:00","02:00"], event2 = ["01:20","03:00"]
-// Output: true
-// Explanation: The two events intersect starting from 01:20 to 02:00.
-// Example 3:
-
-// Input: event1 = ["10:00","11:00"], event2 = ["14:00","15:00"]
-// Output: false
-// Explanation: The two events do not intersect.
-
-var haveConflict = function(event1, event2) {
-    let start1 = convertTimetoMinute(event1[0])
-    let end1 = convertTimetoMinute(event1[1])
-    let start2 = convertTimetoMinute(event2[0])
-    let end2 = convertTimetoMinute(event2[1])
-     if (end1 >= start2 && start1 <= end2) {
-        return true; // Conflict
-    }
-    return false
-
-};
-    function convertTimetoMinute(time){
-    const [hours, minutes] = time.split(":").map(Number);
-    // console.log(hours  * 60 + minutes)
-    return hours * 60 + minutes;
-    }
-
-
-// 1
-// 2 3
-// 4 5 6
-// 7 8 9 10
-let count = 1
-for(let i=1;i<=4;i++){
-    let bag = "";
-    for(let j=1;j<=i;j++){
-        bag += count+" ";
-        count++;
-    }
-    console.log(bag);
-}
-
-// 2,4,8,32,…. 
-// Please print this series, you have just 2 as first input
-let amul = 2;
-for(let i=1;i<=10;i++){
-    console.log(amul);
-    amul = amul * 2
-}
-
-// Input: reverseWords("Hello world! This is a test.")
-// Output: "olleH !dlrow sihT si a .tset"
-
-function reverseWords(){
-    let bag = [];
-    let words = str.split(" ");
-    for(let i=0;i<words.length;i++){
-        p = words[i].split("").reverse().join("");
-        bag.push(p)
-    }
-    console.log(bag.join(""));
-}
-reverseWords()
+const people = [
+    { name: "Alice", age: 25 },
+    { name: "Bob", age: 30 },
+    { name: "Carol", age: 25 },
+    { name: "David", age: 30 }
+];
+groupByAge(people)
