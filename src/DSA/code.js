@@ -1398,3 +1398,11 @@ for(let i=1;i<=4;i++){
     }
     console.log(bag);
 }
+
+// 2,4,8,32,…. 
+// Please print this series, you have just 2 as first input
+let amul = 2;
+for(let i=1;i<=10;i++){
+    console.log(amul);
+    amul = amul * 2
+}
