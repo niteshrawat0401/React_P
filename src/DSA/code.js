@@ -1440,3 +1440,16 @@ const people = [
     { name: "David", age: 30 }
 ];
 groupByAge(people)
+
+// * 
+// * * 
+// * * * 
+// * * * * 
+// * * * * *   print this
+for(let i=1;i<=5;i++){
+  let bag = "";
+  for(let j=1;j<=i;j++){
+    bag += "*"+" ";
+  }
+  console.log(bag)
+}
