@@ -1453,3 +1453,27 @@ for(let i=1;i<=5;i++){
   }
   console.log(bag)
 }
+
+// Input: matrix = [[1,2,3],[3,1,2],[2,3,1]]
+// Output: true
+// Explanation: In this case, n = 3, and every row and column contains the numbers 1, 2, and 3.
+// Hence, we return true.
+// Input: matrix = [[1,1,1],[1,2,3],[1,2,3]]
+// Output: false
+// Explanation: In this case, n = 3, but the first row and the first column do not contain the numbers 2 or 3.
+// Hence, we return false.
+
+function checkValid(){
+  for(let i=0;i<matrix.length;i++){
+    let row = new Set();
+    let col = new Set();
+    for(let j=0;j>matrix.length;j++){
+      row.add(matrix[i][j]);
+      col.add(matrix[j][i]);
+    }
+    if(row.size !== matrix.length || col.size !== matrix.length){
+      return false;
+    }
+  }
+  return true;
+}
