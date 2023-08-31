@@ -1538,3 +1538,33 @@ var maxDivScore = function(nums, divisors) {
 const strStr = function(haystack, needle){
   return haystack.indexOf(needle)
 }
+
+// Example 1:
+// Input: nums = [1,2,3,3]
+// Output: 3
+// Example 2:
+// Input: nums = [2,1,2,5,3,2]
+// Output: 2
+// Example 3:
+// Input: nums = [5,1,5,2,5,3,5,4]
+// Output: 5
+var repeatedNTimes = function(nums) {
+  let obj = {};
+  for(let i=0;i<nums.length;i++){
+      if(obj[nums[i]] === undefined){
+          obj[nums[i]] = 1;
+      }
+      else{
+          obj[nums[i]]++;
+      }
+  }
+  let max = -Infinity;
+  let num;
+  for(let key in obj){
+      if(obj[key] > max){
+          max = obj[key];
+          num = key
+      }
+  }
+  return num
+};
