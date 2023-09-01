@@ -1568,3 +1568,12 @@ var repeatedNTimes = function(nums) {
   }
   return num
 };
+
+// Define a variable
+var myVariable = [1, 2, 3, 4, 5];
+// Check if myVariable is an array
+if (Array.isArray(myVariable)) {
+    console.log("myVariable is an array.");
+} else {
+    console.log("myVariable is not an array.");
+}
