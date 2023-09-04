@@ -1615,3 +1615,17 @@ for(let i=0;i<n;i++){
   }
 }
 return nums
+
+
+// Question 2: Write a function factorial that calculates the factorial of a given number.
+// Test Case:
+console.log(factorial(5));  // Expected Output: 120
+console.log(factorial(0));  // Expected Output: 1
+console.log(factorial(10)); // Expected Output: 3628800
+function factorial(num){
+    let pro = 1;
+    for(let i=num;i>=1;i--){
+        pro = pro * i
+    }
+    return pro
+}
