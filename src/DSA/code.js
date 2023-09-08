@@ -1629,3 +1629,28 @@ function factorial(num){
     }
     return pro
 }
+
+
+// Question 1: Write a function isPalindrome that checks if a given string is a palindrome (reads the same forwards and backwards).
+// Test Case:
+console.log(isPalindrome("racecar")); // Expected Output: true
+console.log(isPalindrome("hello"));   // Expected Output: false
+console.log(isPalindrome("A man, a plan, a canal, Panama")); // Expected Output: true
+
+function isPalindrome(str1){
+    let str1 = "racecar"
+    let s = str1.split(" ").join("")
+    let s1 = s.split(",").join("").toLowerCase()
+    // console.log(s1);
+    let bag = "";
+    for(let i=s1.length-1;i>=0;i--){
+        bag += s1[i]
+    }
+    if(s1 === bag){
+        return true
+    }
+    else{
+        return false
+
+    }
+}
