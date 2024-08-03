@@ -49,23 +49,28 @@ import {useRef, useEffect, useState } from "react";
 // const { useState, useRef, useEffect } = React;
 
 const Useref = () => {
-  const [isEditing, setEditing] = useState(false);
-  const toggleEditing = () => {
-    setEditing(!isEditing);
-  };
-  const inputRef = useRef(null);
+  const inputref = useRef();
+
+  const focusit = ()=>{
+    inputref.current.focus()
+  }
+  // const [isEditing, setEditing] = useState(false);
+  // const toggleEditing = () => {
+  //   setEditing(!isEditing);
+  // };
+  // const inputRef = useRef(null);
   
-  useEffect(()=>{
-    if(isEditing){
-      inputRef.current.focus();
-    }
-  }, [isEditing])
+  // useEffect(()=>{
+  //   if(isEditing){
+  //     inputRef.current.focus();
+  //   }
+  // }, [isEditing])
   
   return (
     <div>
-      {isEditing && <input ref={inputRef} />}
-      <button onClick={toggleEditing}>Edit</button>
-    </div>
+       <input ref={inputref} />
+       <button onClick={focusit}>Edit</button>
+     </div>
   );
 };
 

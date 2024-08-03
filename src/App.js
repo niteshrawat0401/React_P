@@ -1,5 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
+import { lazy, Suspense } from "react";
 // import { Display } from './redux-prac/display/Display';
 import Button from "./Button/Button";
 import { Toggle } from "./Button/Toggle";
@@ -23,18 +24,24 @@ import {Signin} from './googleauth/Signin'
 import AccountProvider from './googleauth/AccountProvider'
 import { Main } from "./googleauth/Main";
 import Star from "./Button/Star";
+import { Mycustom_compo } from "./Customhook/Mycustom_compo";
+import SortAlpha from "./Button/SortAlpha";
+// import { LimitedData } from "./Customhook/LimitedData";
+
+const LimitedData = lazy(()=> import('./Customhook/LimitedData'));
 
 function App() {
   let clientId = '507262472563-jnmcgpmn8jpmlor1d8q68vutuptm87lm.apps.googleusercontent.com'
   return (
     <div className="App">
+      <Suspense fallback={<h1>...loading</h1>}>
       {/* <StudentDetails/> */}
       {/* <Display/> */}
       {/* <Button/> */}
       {/* <Toggle/> */}
-      {/* <UseMemo/> */}
+      <UseMemo/>
       {/* <Usebtn/> */}
-      {/* <Useref/>/ */}
+      {/* <Useref/> */}
       {/* <Serach placeholder="Enter a Book Name..." data={BookData}/> */}
       {/* <Infinte/> */}
       {/* <Todo/> */}
@@ -55,7 +62,11 @@ function App() {
         </AccountProvider>
       </GoogleOAuthProvider> */}
 
-      <Star/>
+      {/* <Star/> */}
+      {/* <SortAlpha/> */}
+        {/* <Mycustom_compo/> */}
+        {/* <LimitedData/> */}
+        </Suspense>
     </div>
   );
 }
