@@ -19,20 +19,28 @@ You have to code this in react.
 Do not use any external libraries.
 */
 const Star = () => {
+  // const [stars, setStars] = useState(Array(5).fill('black'));
+
   const [stars, setStars] = useState(Array(5).fill('black'));
 
   const handleClick = (index) => {
-    const updatedStars = stars.map((star, i) => {
-      if (i < index) return 'blue';
-      if (i === index) return 'red';
-      return 'black';
-    });
-    setStars(updatedStars);
+    // const updatedStars = stars.map((star, i) => {
+    //   if (i < index) return 'blue';
+    //   if (i === index) return 'red';
+    //   return 'black';
+    // });
+    // setStars(updatedStars);
+    const colorSet = stars.map((star,i)=>{
+      if(i == index)   return 'red';
+       if(i < index) return 'blue';
+      return 'black'
+    })
+    setStars(colorSet);
   };
-
+  
   return (
     <div>
-    <div>
+    {/* <div>
       {stars.map((color, index) => (
         <button
           key={index}
@@ -42,7 +50,18 @@ const Star = () => {
           *
         </button>
       ))}
+    </div> */}
+    <div style={{display: 'flex' , margin: 'auto'}}>
+    {stars.map((color,index)=>{
+      return(
+    <div style={{border: '1px solid red'}}>
+      <button onClick={()=>handleClick(index)} style={{color: 'white',width: '5rem',background: color}}>*</button>
     </div>
+      )
+    })}
+
+    </div>
+
     </div>
   )
 }

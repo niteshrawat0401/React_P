@@ -12,40 +12,67 @@ export const Infinte = () => {
       `https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-products?page=${page}&limit=10&orderBy=desc`
     );
     let data = await res.json();
-    // console.log(data);
+    console.log(data);
     setData((pre) => [...pre, ...data.data]);
     setIsloading(false);
   };
 
-  useEffect(() => {
-    setTimeout(() => {
-      getData();
-    }, 1000);
-  }, [page]);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     getData();
+  //   }, 1000);
+  // }, [page]);
 
-  const handleScroll = async () => {
-    console.log(window.innerHeight);
+  // const handleScroll = async () => {
+  //   console.log(window.innerHeight);
+  //   console.log(document.documentElement.scrollTop);
+  //   console.log(document.documentElement.scrollHeight);
+  //   try {
+  //     if (
+  //       window.innerHeight + document.documentElement.scrollTop + 1 >=
+  //       document.documentElement.scrollHeight
+  //     ) {
+  //       setIsloading(true);
+  //       setPage((page) => page + 1);
+  //     }
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   document.addEventListener("scroll", handleScroll);
+  //   return () => {
+  //     document.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
+
+  useEffect(()=>{
+    setTimeout(() => {
+      getData()      
+    }, 1000);
+  },[page])
+
+
+  const handleScroll = ()=>{
+      console.log(window.innerHeight);
     console.log(document.documentElement.scrollTop);
     console.log(document.documentElement.scrollHeight);
-    try {
-      if (
-        window.innerHeight + document.documentElement.scrollTop + 1 >=
-        document.documentElement.scrollHeight
-      ) {
+    if(window.innerHeight + document.documentElement.scrollTop + 1 >
+       document.documentElement.scrollHeight){
         setIsloading(true);
-        setPage((page) => page + 1);
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
+        setPage(page + 1)
+       }
+  }
 
-  useEffect(() => {
-    document.addEventListener("scroll", handleScroll);
-    return () => {
-      document.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  useEffect(()=>{
+    window.addEventListener('scroll', handleScroll);
+
+    return ()=>{
+      window.removeEventListener('scroll', handleScroll)
+    }
+  },[])
+
 
   return (
     <div>
