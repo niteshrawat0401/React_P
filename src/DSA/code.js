@@ -1216,6 +1216,19 @@ let arr = [6,5,6,12,18,5,18,9]
     //     }
     // }
 
+    // let largest = -Infinity;
+    // let second = -Infinity;
+    // for(let i=0;i<a.length;i++){
+    //   if(a[i] > largest){
+    //     largest = a[i];
+    //     second = largest;
+    //   }
+    //   else if(a[i] > second && a[i] < largest){
+    //     second = a[i];
+    //   }
+    // }
+    // console.log(second)
+
 
 // Input: arr = [1,0,2,3,0,4,5,0]
 // Output: [1,0,0,2,3,0,0,4]
