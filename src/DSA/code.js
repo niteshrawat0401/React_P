@@ -50,23 +50,22 @@
 // // 8
 // // 1 2 3 4 2 1 6 5
 
-// let count2=0;
-// for(let i=0;i<n;i++){
-//     if(i===0){
-//         if(arr[i]>arr[i+1]){
-//             count2++
-//         }
+// let count1 = 0;
+// for(let i=0;i<arr.length;i++){
+//     if(i === 0 || arr.length-1 === i){
+//     if(arr[0] > arr[i+1]){
+//         count1++
+        
 //     }
-//     else if(i===n-1){
-//         if(arr[i]>arr[i-1]){
-//             count2++;
-//         }
+//     else if(arr[arr.length-1] > arr[i-1]){
+//         count1++;
 //     }
-//     else if(arr[i]>arr[i+1] && arr[i]>arr[i-1]){
-//         count2++;
+//     }
+//     else if(arr[i+1] < arr[i] && arr[i-1] < arr[i]){
+//         count1++
 //     }
 // }
-// console.log(count2);
+// console.log(count1)
 
 
 // // Selection Sort Problem
