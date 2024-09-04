@@ -1,26 +1,31 @@
 import React from 'react'
 import { useCallback } from 'react';
 import { useState } from 'react'
+import Todos from './Todos';
 
 export const Usebtn = () => {
-  const [count,setCount] = useState(0);
-  var count1;
-    const handleinc= useCallback(()=>{ 
-      setCount(count+1);
-      if(count==10){
-        count= count+10
-      }
-      console.log("increment");
-  })
-    const handledec= useCallback(()=>{ 
-      setCount(count-1);
-      console.log("decrement");
-  })
+  const [count, setCount] = useState(0);
+  const [todos, setTodos] = useState(["todo 1", "todo 2"]);
+
+  const increment = () => {
+    setCount((c) => c + 1);
+  };
+
+  const addTodo = () => {
+    setTodos((t) => [...t, "New Todo"]);
+  };
+
+  const add = useCallback(()=>{
+    addTodo()
+  },[todos])
+
   return (
-    <div>
-      <h1 style={{marginTop:"2rem"}}>{count}</h1>
-        <button onClick={handleinc}>Increment</button>
-        <button onClick={handledec}>Decrement</button>
-    </div>
-  )
-}
+    <>
+      <Todos todos={todos} addTodo={add}/>
+      <hr />
+      <div>
+        Count: {count}
+        <button onClick={increment}>+</button>
+      </div>
+    </>
+  );;}

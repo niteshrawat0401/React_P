@@ -191,7 +191,8 @@
 
 
 // // Array to String
-// // If elements of the array are 3 5 0 9 8 => the output string should be "35098" (without quotes). But in case of elements are negative (lesser than 0), your string should contain 0 instead of that number.
+// // If elements of the array are 3 5 0 9 8 => the output string should be "35098" (without quotes).
+//  But in case of elements are negative (lesser than 0), your string should contain 0 instead of that number.
 // // 5
 // // 2 -4 6 8 -9
 
@@ -370,7 +371,9 @@
 
 
 // // Upper Bound in LogN
-// // You are given n different numbers and an integer k. Write a program that finds upper bound of k in log(n) time complexity. Upper bound of a number k in a sorted list is the index of the first number which is greater than k (here the answer is given considering index to be starting from 0)
+// // You are given n different numbers and an integer k. Write a program that finds upper bound of k in log(n) time complexity.
+//  Upper bound of a number k in a sorted list is the index of the first number which is greater than k 
+// (here the answer is given considering index to be starting from 0)
 // // -> Test cases are such that there is always one number greater than k
 // // 10 3
 // // 0 2 4 4 5 5 7 7 9 10
@@ -395,8 +398,10 @@
 
 // // Minimum in sorted & rotated array
 // // Given an array of length n, and it is sorted and rotated at some unknown point, find the minimum element in it.
-// // In a sorted & rotated array,  we rotate an ascending order sorted array at some pivot unknown to you beforehand. So for instance, 1 2 3 4 5 might become 3 4 5 1 2.
-// // Please note that the linear search approach with the time complexity of O(n) can easily be applied. But you are expected to solve it in O(log n) time complexity
+// // In a sorted & rotated array,  we rotate an ascending order sorted array at some pivot unknown to you beforehand.
+//  So for instance, 1 2 3 4 5 might become 3 4 5 1 2.
+// // Please note that the linear search approach with the time complexity of O(n) can easily be applied.
+//  But you are expected to solve it in O(log n) time complexity
 // // 10
 // // 4 6 7 9 10 -1 0 1 2 3
 

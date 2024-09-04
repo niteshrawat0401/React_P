@@ -40,10 +40,10 @@ function App() {
       {/* <Button/> */}
       {/* <Toggle/> */}
       {/* <UseMemo/> */}
-      {/* <Usebtn/> */}
+      <Usebtn/>
       {/* <Useref/> */}
       {/* <Serach placeholder="Enter a Book Name..." data={BookData}/> */}
-      <Infinte/>
+      {/* <Infinte/> */}
       {/* <Todo/> */}
       {/* <Home/> */}
      {/* <Pagination/> */}
