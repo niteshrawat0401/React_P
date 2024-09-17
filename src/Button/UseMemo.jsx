@@ -39,10 +39,10 @@ export const UseMemo = () => {
     return counter1;
   }
 
-  const call = expenseCallculation(counter1)
-  // const call =  useMemo(()=>{
-  //   expenseCallculation(counter1)
-  // },[counter1])
+  // const call = expenseCallculation(counter1)
+  const call =  useMemo(()=>{
+    expenseCallculation(counter1)
+  },[counter1])
 
   
 
