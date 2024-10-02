@@ -26,6 +26,7 @@ import { Main } from "./googleauth/Main";
 import Star from "./Button/Star";
 import { Mycustom_compo } from "./Customhook/Mycustom_compo";
 import SortAlpha from "./Button/SortAlpha";
+import Paginate from "./Miniproject/Pagination/Paginate";
 // import { LimitedData } from "./Customhook/LimitedData";
 
 const LimitedData = lazy(()=> import('./Customhook/LimitedData'));
@@ -40,7 +41,7 @@ function App() {
       {/* <Button/> */}
       {/* <Toggle/> */}
       {/* <UseMemo/> */}
-      <Usebtn/>
+      {/* <Usebtn/> */}
       {/* <Useref/> */}
       {/* <Serach placeholder="Enter a Book Name..." data={BookData}/> */}
       {/* <Infinte/> */}
@@ -66,6 +67,7 @@ function App() {
       {/* <SortAlpha/> */}
         {/* <Mycustom_compo/> */}
         {/* <LimitedData/> */}
+        <Paginate/>
         </Suspense>
     </div>
   );
