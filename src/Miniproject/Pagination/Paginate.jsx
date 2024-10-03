@@ -45,6 +45,7 @@ const Paginate = () => {
         if(sort === 'desc')
           return b?.countryNo - a?.countryNo;
       })
+      setPresentPage(1)
       setCountryData(lth)
       pageDivide()
     }
