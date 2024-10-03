@@ -37,8 +37,24 @@ const Paginate = () => {
         setPresentPage(presentPage - 1);
     } 
 
+    const sortFunction = (sort)=>{
+      let lth = countryData?.sort((a,b)=>{
+        if(sort === 'asc'){
+          return a?.countryNo - b?.countryNo;
+        } 
+        if(sort === 'desc')
+          return b?.countryNo - a?.countryNo;
+      })
+      setCountryData(lth)
+      pageDivide()
+    }
+    console.log(countryData);
+    
+
     return (
     <div>
+      <div><button onClick={()=>sortFunction('asc')}>Low to High</button></div>
+      <div><button onClick={()=>sortFunction('desc')}>High to Low</button></div>
       {newData?.map((ele,i) => {
         return (
           <div key={i}>
@@ -76,14 +92,14 @@ export default Paginate
 
 
 const countriesAndAnimals = [
-    { country: "India", nationalAnimal: "Bengal Tiger" },
-    { country: "United States", nationalAnimal: "Bald Eagle" },
-    { country: "Australia", nationalAnimal: "Kangaroo" },
-    { country: "China", nationalAnimal: "Giant Panda" },
-    { country: "Canada", nationalAnimal: "Beaver" },
-    { country: "Russia", nationalAnimal: "Brown Bear" },
-    { country: "Japan", nationalAnimal: "Sika Deer" },
-    { country: "Brazil", nationalAnimal: "Jaguar" },
-    { country: "South Africa", nationalAnimal: "Lion" },
-    { country: "Mexico", nationalAnimal: "Golden Eagle" }
+    { country: "India", nationalAnimal: "Bengal Tiger", countryNo: 1 },
+    { country: "United States", nationalAnimal: "Bald Eagle", countryNo: 2 },
+    { country: "Australia", nationalAnimal: "Kangaroo", countryNo: 10 },
+    { country: "China", nationalAnimal: "Giant Panda", countryNo: 7 },
+    { country: "Canada", nationalAnimal: "Beaver", countryNo: 6 },
+    { country: "Russia", nationalAnimal: "Brown Bear", countryNo: 9 },
+    { country: "Japan", nationalAnimal: "Sika Deer", countryNo: 8 },
+    { country: "Brazil", nationalAnimal: "Jaguar", countryNo: 4 },
+    { country: "South Africa", nationalAnimal: "Lion", countryNo: 3 },
+    { country: "Mexico", nationalAnimal: "Golden Eagle", countryNo: 5 }
   ];
