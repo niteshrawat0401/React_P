@@ -27,6 +27,8 @@ import Star from "./Button/Star";
 import { Mycustom_compo } from "./Customhook/Mycustom_compo";
 import SortAlpha from "./Button/SortAlpha";
 import Paginate from "./Miniproject/Pagination/Paginate";
+import Product from "./Miniproject/ShoppingCart/Product";
+import { Context } from "./Miniproject/ShoppingCart/ContextFile";
 // import { LimitedData } from "./Customhook/LimitedData";
 
 const LimitedData = lazy(()=> import('./Customhook/LimitedData'));
@@ -67,7 +69,12 @@ function App() {
       {/* <SortAlpha/> */}
         {/* <Mycustom_compo/> */}
         {/* <LimitedData/> */}
-        <Paginate/>
+
+
+        {/* <Paginate/> */}
+        <Context>
+        <Product/>
+        </Context>
         </Suspense>
     </div>
   );
