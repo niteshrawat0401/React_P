@@ -5,13 +5,13 @@ export const UseContext = createContext();
 export const Context = ({ children }) => {
     const [cart, setCart] = useState([]);
     const [productData, setProductData] = useState(products);
-  const [updateQuan, setUpdateQuan] = useState([]);
-
+    const [updateQuan, setUpdateQuan] = useState([]);
 
   useEffect(()=>{
     setUpdateQuan(cart.map(item => ({name: item?.name, quantity: 1, price: item.price })));
   },[cart])
 
+//   increment quantity
   const handleIncQuantity = (ele,i)=>{
     let newUpdateQuan = updateQuan.map((item,index)=> {
         if(index === i){
@@ -22,8 +22,9 @@ export const Context = ({ children }) => {
     })
     setUpdateQuan(newUpdateQuan)
 }
-  const handleDecQuantity = (ele,i)=>{
 
+//   decrement quantity
+  const handleDecQuantity = (ele,i)=>{
     const newUpdateQuan = updateQuan.map((item, index)=>{
         if(index === i){
             const newQuantity = item?.quantity - 1;
@@ -34,13 +35,13 @@ export const Context = ({ children }) => {
     setUpdateQuan(newUpdateQuan)
   }
 
-  const handleDelete = (ele,i)=>{
-    let deleteItem = cart.filter((item,index)=>{
-        return index !== i && item
-    })
-    setCart(deleteItem)
-}
-
+//   delete function
+  const handleDelete = (ele, i) => {
+    let deleteItem = cart.filter((item, index) => {
+      return index !== i && item;
+    });
+    setCart(deleteItem);
+  };
 
   return (
     <UseContext.Provider value={{ 
