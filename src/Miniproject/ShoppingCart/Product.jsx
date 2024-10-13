@@ -7,6 +7,7 @@ const Product = () => {
     const {cart, setCart, productData, updateQuan, setUpdateQuan} = useContext(UseContext);
     const navigate = useNavigate()
 
+    // add cart function
     const addToCart = (ele, i) => {
       let newarr = [];
       updateQuan.map((item, i) => {
