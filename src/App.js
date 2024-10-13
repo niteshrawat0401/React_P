@@ -29,6 +29,7 @@ import SortAlpha from "./Button/SortAlpha";
 import Paginate from "./Miniproject/Pagination/Paginate";
 import Product from "./Miniproject/ShoppingCart/Product";
 import { Context } from "./Miniproject/ShoppingCart/ContextFile";
+import CartPage from "./Miniproject/ShoppingCart/CartPage";
 // import { LimitedData } from "./Customhook/LimitedData";
 
 const LimitedData = lazy(()=> import('./Customhook/LimitedData'));
@@ -73,8 +74,13 @@ function App() {
 
         {/* <Paginate/> */}
         <Context>
-        <Product/>
+        <Routes>
+          <Route path="/product" element={<Product/>}/>
+          <Route path="/cart" element={<CartPage/>}/>
+        </Routes>
         </Context>
+        {/* <Product/>
+        <CartPage/> */}
         </Suspense>
     </div>
   );
