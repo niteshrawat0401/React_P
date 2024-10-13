@@ -45,7 +45,7 @@ const CartPage = () => {
                   <p>{updateQuan[i]?.quantity}</p>
                   <button onClick={() => handleIncQuantity(ele, i)}>+</button>
                   <p>{updateQuan[i]?.price}</p>
-                  <button onClick={() => handleDelete(ele, i)}>Delete</button>
+                  <button style={{cursor: 'pointer'}} onClick={() => handleDelete(ele, i)}>Delete</button>
                 </div>
               </div>
             );
